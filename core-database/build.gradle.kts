@@ -66,7 +66,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.lidigu.core-database"
+    namespace = "com.lidigu.coreDatabase"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
@@ -97,7 +97,7 @@ compose.desktop {
     application {
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.lidigu.core-database"
+            packageName = "com.lidigu.coreDatabase"
             packageVersion = "1.0.0"
         }
     }

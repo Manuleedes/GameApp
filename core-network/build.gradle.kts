@@ -82,7 +82,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.lidigu.core-network"
+    namespace = "com.lidigu.coreNetwork"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
@@ -113,7 +113,7 @@ compose.desktop {
     application {
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.lidigu.core-network"
+            packageName = "com.lidigu.coreNetwork"
             packageVersion = "1.0.0"
         }
     }
