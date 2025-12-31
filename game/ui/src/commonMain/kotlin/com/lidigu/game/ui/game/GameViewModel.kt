@@ -16,7 +16,7 @@ class GameViewModel(
 ): ViewModel() {
     private val _uiState = MutableStateFlow(GameScreen.UiState())
     val uiState = _uiState.asStateFlow()
-    
+
     init {
         getGames()
     }

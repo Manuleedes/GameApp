@@ -12,5 +12,5 @@ class GetGamesUseCase(private val gameRepository: GameRepository) {
         emit(gameRepository.getGames())
     }.catch { error ->
         emit(Result.failure(error))
-    }.flowOn(Dispatchers.IO)
+    }.flowOn(Dispatchers.Default)
 }
