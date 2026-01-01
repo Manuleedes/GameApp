@@ -10,6 +10,6 @@ data class Result(
     @SerialName("image_background")
     val imageBackground: String = "",
     @SerialName("name")
-    val name: String = "",
+    val name: String = ""
 
 )

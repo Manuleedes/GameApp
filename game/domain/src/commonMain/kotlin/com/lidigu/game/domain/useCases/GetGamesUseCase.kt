@@ -8,9 +8,10 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 
 class GetGamesUseCase(private val gameRepository: GameRepository) {
-    operator fun invoke() = flow<Result<List<Game>>> {
+    operator fun invoke() = flow<Result<List<Game>>>{
         emit(gameRepository.getGames())
+
     }.catch { error ->
         emit(Result.failure(error))
-    }.flowOn(Dispatchers.Default)
+    }.flowOn(Dispatchers.IO)
 }

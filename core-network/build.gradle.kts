@@ -9,6 +9,9 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.composeHotReload)
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.9.0"
+
+
 }
 
 kotlin {
@@ -61,6 +64,8 @@ kotlin {
             implementation(libs.ktor.client.contentNegotiation)
             implementation(libs.ktor.serialization.kotlinxJson)
             implementation(libs.koin.core)
+            implementation(libs.kotlinx.serialization)
+
         }
 
         iosMain.dependencies {

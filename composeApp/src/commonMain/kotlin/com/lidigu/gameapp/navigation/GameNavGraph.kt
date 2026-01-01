@@ -23,9 +23,11 @@ object GameNavGraph: BaseNavGraph {
         navGraphBuilder.navigation(route = Dest.Root.route,
             startDestination = Dest.Game.route){
             composable(route = Dest.Game.route){
-                GameScreen(modifier = modifier.fillMaxSize(), onFavoriteClick = {
-
-                })
+                GameScreen(
+                    modifier = modifier.fillMaxSize(), onFavoriteClick = {},
+                    onSearchClick = {},
+                    onClick = {}
+                )
             }
 
         }
