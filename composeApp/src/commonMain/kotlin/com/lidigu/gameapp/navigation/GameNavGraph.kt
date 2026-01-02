@@ -13,6 +13,10 @@ object GameNavGraph: BaseNavGraph {
         data object Root: Dest("/game-root")
         data object Game: Dest("/game")
 
+        data object Details: Dest("/game_details/{id}"){
+            fun getRoute(id: Int) = "/game_details/${id}"
+        }
+
     }
 
     override fun build(
@@ -28,7 +32,9 @@ object GameNavGraph: BaseNavGraph {
                     onSearchClick = {
                         navHostController.navigate(SearchNavGraph.Dest.Search.route)
                     },
-                    onClick = {}
+                    onClick = {
+                        navHostController.navigate(Dest.Details.getRoute(it))
+                    }
                 )
             }
 
