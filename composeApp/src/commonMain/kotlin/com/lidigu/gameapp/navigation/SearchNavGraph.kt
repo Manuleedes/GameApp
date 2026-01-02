@@ -1,5 +1,6 @@
 package com.lidigu.gameapp.navigation
 
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
@@ -13,7 +14,6 @@ object SearchNavGraph: BaseNavGraph {
         data object Root: Dest("/search-root")
         data object Search: Dest("/search")
     }
-
     override fun build(
         modifier: Modifier,
         navHostController: NavHostController,
@@ -22,7 +22,7 @@ object SearchNavGraph: BaseNavGraph {
         navGraphBuilder.navigation(route = Dest.Root.route,
             startDestination = Dest.Search.route){
             composable(route = Dest.Search.route){
-                SearchScreen {  }
+                SearchScreen(modifier = modifier.fillMaxSize(), onClick ={} )
             }
 
         }

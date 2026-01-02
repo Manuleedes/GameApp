@@ -49,6 +49,7 @@ kotlin {
             implementation(projects.coreNetwork)
             implementation(projects.game.domain)
             implementation(projects.common.data)
+            implementation(projects.common.domain)
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)

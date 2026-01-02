@@ -7,6 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.lidigu.gameapp.navigation.GameNavGraph
+import com.lidigu.gameapp.navigation.SearchNavGraph
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
@@ -16,7 +17,8 @@ fun App() {
         val navHostController = rememberNavController()
         NavHost(navHostController, startDestination = GameNavGraph.Dest.Root.route){
             listOf(
-                GameNavGraph
+                GameNavGraph,
+                SearchNavGraph
             ).forEach {
                 it.build(
                     modifier = Modifier.fillMaxSize(),

@@ -25,7 +25,9 @@ object GameNavGraph: BaseNavGraph {
             composable(route = Dest.Game.route){
                 GameScreen(
                     modifier = modifier.fillMaxSize(), onFavoriteClick = {},
-                    onSearchClick = {},
+                    onSearchClick = {
+                        navHostController.navigate(SearchNavGraph.Dest.Search.route)
+                    },
                     onClick = {}
                 )
             }
