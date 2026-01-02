@@ -7,6 +7,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import com.lidigu.game.ui.game.GameScreen
+import com.lidigu.game.ui.gameDetails.GameDetailsScreen
 
 object GameNavGraph: BaseNavGraph {
     sealed class Dest(val route: String){
@@ -36,6 +37,12 @@ object GameNavGraph: BaseNavGraph {
                         navHostController.navigate(Dest.Details.getRoute(it))
                     }
                 )
+            }
+            composable(route = Dest.Details.route){
+                val id = it.arguments?.getString("id")
+                GameDetailsScreen(modifier = modifier.fillMaxSize(),
+                   id.toString() )
+
             }
 
         }
