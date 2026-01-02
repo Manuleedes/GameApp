@@ -1,4 +1,4 @@
-package com.lidigu.game.domain.model
+package com.lidigu.common.domain.model
 
 data class Game(
     val id : Int,

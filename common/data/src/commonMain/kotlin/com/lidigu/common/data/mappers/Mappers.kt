@@ -1,7 +1,7 @@
-package com.lidigu.game.data.mappers
+package com.lidigu.common.data.mappers
 
+import com.lidigu.common.domain.model.Game
 import com.lidigu.coreNetwork.model.game.Result
-import com.lidigu.game.domain.model.Game
 
 fun List<Result>.toDomainListOfGames(): List<Game> = map {
     Game(

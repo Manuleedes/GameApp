@@ -47,6 +47,7 @@ kotlin {
         }
         commonMain.dependencies {
             implementation(projects.common.domain)
+            implementation(projects.coreNetwork)
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)
@@ -55,7 +56,6 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
-            implementation(libs.koin.core)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -68,7 +68,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.lidigu.game.domain"
+    namespace = "com.lidigu.common.data"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
@@ -99,7 +99,7 @@ compose.desktop {
     application {
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.lidigu.game.domain"
+            packageName = "com.lidigu.common.data"
             packageVersion = "1.0.0"
         }
     }

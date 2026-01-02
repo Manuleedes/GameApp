@@ -1,6 +1,7 @@
 package com.lidigu.game.domain.useCases
 
-import com.lidigu.game.domain.model.Game
+
+import com.lidigu.common.domain.model.Game
 import com.lidigu.game.domain.repository.GameRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch

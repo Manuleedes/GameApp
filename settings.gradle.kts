@@ -49,3 +49,7 @@ include(":game:domain")
 include(":favorite:ui")
 include(":favorite:data")
 include(":favorite:domain")
+
+include(":common:ui")
+include(":common:data")
+include(":common:domain")
