@@ -1,11 +1,11 @@
-package com.lidigu.coreNetwork.model.game
+package com.lidigu.coreNetwork.model.gameDetails
 
 import kotlinx.serialization.Serializable
 
-
 @Serializable
-data class Result(
-    val background_image: String,
+
+data class Platform(
     val id: Int,
     val name: String,
+    val slug: String
 )
