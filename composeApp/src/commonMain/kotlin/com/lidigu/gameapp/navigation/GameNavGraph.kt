@@ -41,7 +41,9 @@ object GameNavGraph: BaseNavGraph {
             composable(route = Dest.Details.route){
                 val id = it.arguments?.getString("id")
                 GameDetailsScreen(modifier = modifier.fillMaxSize(),
-                   id.toString() )
+                   id.toString(), onBackClick = {
+                       navHostController.popBackStack()
+                    } )
 
             }
 

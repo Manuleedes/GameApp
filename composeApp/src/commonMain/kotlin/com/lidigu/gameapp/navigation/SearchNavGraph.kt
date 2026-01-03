@@ -22,7 +22,9 @@ object SearchNavGraph: BaseNavGraph {
         navGraphBuilder.navigation(route = Dest.Root.route,
             startDestination = Dest.Search.route){
             composable(route = Dest.Search.route){
-                SearchScreen(modifier = modifier.fillMaxSize(), onClick ={} )
+                SearchScreen(modifier = modifier.fillMaxSize(), onClick ={
+                    navHostController.navigate(GameNavGraph.Dest.Details.getRoute(it))
+                } )
             }
 
         }

@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -43,32 +44,42 @@ import coil3.compose.AsyncImage
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
-fun GameDetailsScreen(modifier: Modifier = Modifier, id: String){
+fun GameDetailsScreen(modifier: Modifier = Modifier, id: String, onBackClick: () -> Unit) {
+
     val viewModel = koinViewModel<GameDetailsViewModel>()
     val uiState = viewModel.uiState.collectAsStateWithLifecycle()
 
-    LaunchedEffect(id){
+    LaunchedEffect(id) {
         viewModel.getGameDetails(id.toInt())
     }
 
-    GameDetailsScreenContent(modifier = modifier.fillMaxSize(),uiState= uiState.value)
+    GameDetailsScreenContent(
+        modifier = modifier.fillMaxSize(), uiState = uiState.value,
+        onDelete = { viewModel.delete(it) },
+        onSave = { id, name, image -> viewModel.save(id, image, name) },
+        onBackClick = onBackClick
+    )
+
 }
 
-
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun GameDetailsScreenContent(
-    modifier: Modifier = Modifier, uiState: GameDetailsScreen.UiState
-){
-   if (uiState.isLoading) {
-       Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
-           CircularProgressIndicator()
-       }
-   }
-    if (uiState.error.isNotBlank()){
-        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
+    modifier: Modifier = Modifier, uiState: GameDetailsScreen.UiState,
+    onDelete: (Int) -> Unit,
+    onSave: (id: Int, title: String, image: String) -> Unit,
+    onBackClick: () -> Unit
+) {
+    if (uiState.isLoading) {
+        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            CircularProgressIndicator()
+        }
+    }
+
+    if (uiState.error.isNotBlank()) {
+        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
             Text(uiState.error)
         }
-
     }
 
     uiState.data?.let { data ->
@@ -92,7 +103,7 @@ fun GameDetailsScreenContent(
                 }
                 item {
                     Column(modifier = Modifier.fillMaxWidth()) {
-                        Text(text = "Platforms:", style = MaterialTheme.typography.headlineSmall,
+                        Text(text = "Platforms:", style = MaterialTheme.typography.headlineLarge,
                            modifier = Modifier.padding(horizontal = 12.dp).padding(top = 24.dp)
                             )
 
@@ -126,7 +137,7 @@ fun GameDetailsScreenContent(
 
                 item {
                     Text(
-                        text = "Stores", style = MaterialTheme.typography.headlineSmall,
+                        text = "Stores", style = MaterialTheme.typography.headlineLarge,
                         modifier = Modifier.padding(horizontal = 12.dp).padding(top = 24.dp)
                             .padding(bottom = 12.dp)
                     )
@@ -174,7 +185,7 @@ fun GameDetailsScreenContent(
 
                 item {
                     Text(
-                        text = "Tags", style = MaterialTheme.typography.headlineSmall,
+                        text = "Tags", style = MaterialTheme.typography.headlineLarge,
                         modifier = Modifier.padding(horizontal = 12.dp).padding(top = 24.dp)
                     )
                 }
@@ -219,7 +230,7 @@ fun GameDetailsScreenContent(
 
                 item {
                     Text(
-                        text = "Developers", style = MaterialTheme.typography.bodySmall,
+                        text = "Developers", style = MaterialTheme.typography.bodyLarge,
                         modifier = Modifier.padding(horizontal = 12.dp)
                             .padding(top = 24.dp, bottom = 12.dp)
                     )
