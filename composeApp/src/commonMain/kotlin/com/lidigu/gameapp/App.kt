@@ -6,6 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
+import com.lidigu.gameapp.navigation.FavoriteNavGraph
 import com.lidigu.gameapp.navigation.GameNavGraph
 import com.lidigu.gameapp.navigation.SearchNavGraph
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -18,7 +19,8 @@ fun App() {
         NavHost(navHostController, startDestination = GameNavGraph.Dest.Root.route){
             listOf(
                 GameNavGraph,
-                SearchNavGraph
+                SearchNavGraph,
+                FavoriteNavGraph
             ).forEach {
                 it.build(
                     modifier = Modifier.fillMaxSize(),
