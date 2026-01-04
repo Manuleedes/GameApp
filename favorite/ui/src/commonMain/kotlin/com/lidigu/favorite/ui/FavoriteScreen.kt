@@ -7,6 +7,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.ListItemDefaults.contentColor
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -16,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.lidigu.common.domain.model.Game
 import com.lidigu.common.ui.listItem.GameItem
+import org.jetbrains.skia.Color
 import org.koin.compose.viewmodel.koinViewModel
 
 
@@ -52,7 +54,8 @@ fun FavoriteScreenContent(modifier: Modifier = Modifier,
         }, navigationIcon = {
             Icon(imageVector =Icons.Default.ArrowBack, contentDescription = null,
                 modifier = Modifier.clickable{onBackClick()})
-        })
+        },contentColor = Color.BLACK,
+            backgroundColor = Color.WHITE)
     }) {
        if (games.isEmpty()){
            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center){

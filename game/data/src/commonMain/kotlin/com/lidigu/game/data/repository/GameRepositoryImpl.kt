@@ -8,7 +8,8 @@ import com.lidigu.game.domain.model.GameDetails
 import com.lidigu.game.domain.repository.GameRepository
 
 class GameRepositoryImpl(
-    private val apiService: ApiService
+    private val apiService: ApiService,
+    private val appDatabase: AppDatabase
 ): GameRepository{
     override suspend fun getGames(): Result<List<Game>> {
         val result = apiService.getGames()
@@ -26,6 +27,15 @@ class GameRepositoryImpl(
         }else{
             Result.failure(result.exceptionOrNull()!!)
         }
+    }
+
+    override suspend fun save(id: Int, image: String, name: String) {
+        appDatabase.appDatabaseQueries
+            .upsert(id.toLong(), image,name)
+    }
+    override suspend fun delete(id: Int) {
+        appDatabase.appDatabaseQueries
+            .delete(id.toLong())
     }
 
 }

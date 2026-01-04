@@ -6,6 +6,6 @@ import org.koin.dsl.module
 
 fun getGameDataModule() = module {
     factory <GameRepository>{
-        GameRepositoryImpl(apiService = get())
+        GameRepositoryImpl(apiService = get(), appDatabase = get())
     }
 }
