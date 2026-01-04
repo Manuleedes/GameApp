@@ -2,6 +2,9 @@ package com.lidigu.gameapp.di
 
 import com.lidigu.coreDatabase.di.getCoreDatabaseModule
 import com.lidigu.coreNetwork.di.getCoreNetworkModule
+import com.lidigu.data.di.getFavoriteDataModule
+import com.lidigu.favorite.domain.di.getFavoriteDomainModule
+import com.lidigu.favorite.ui.di.getFavoriteUiModule
 import com.lidigu.game.data.di.getGameDataModule
 import com.lidigu.game.domain.di.getGameDomainModule
 import com.lidigu.game.ui.di.getGameUiModule
@@ -21,7 +24,10 @@ fun initKoin(koinApplication: ((KoinApplication)-> Unit)? = null){
             getSearchDataModule(),
             getSearchDomainModule(),
             getSearchUiModule(),
-            getCoreDatabaseModule()
+            getCoreDatabaseModule(),
+            getFavoriteDataModule(),
+            getFavoriteDomainModule(),
+            getFavoriteUiModule()
         )
     }
 }
