@@ -1,4 +1,4 @@
 package com.lidigu.gameapp.navigation
 
-object FavoriteNavGraph {
+object FavoriteNavGraph: BaseNavGraph {
 }
