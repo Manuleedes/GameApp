@@ -51,6 +51,7 @@ navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-co
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 sqldelight-runtime = { module = "app.cash.sqldelight:runtime", version.ref = "sqldelight" }
 sqldelight-coroutines = { module = "app.cash.sqldelight:coroutines-extensions", version.ref = "sqldelight" }
+sqldelight-sqljs = { module = "app.cash.sqldelight:sqljs-driver", version.ref = "sqldelight" }
 # Drivers
 sqldelight-android = { module = "app.cash.sqldelight:android-driver", version.ref = "sqldelight" }
 sqldelight-native = { module = "app.cash.sqldelight:native-driver", version.ref = "sqldelight" }

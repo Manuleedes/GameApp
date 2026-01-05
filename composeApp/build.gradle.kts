@@ -18,12 +18,14 @@ kotlin {
     }
     
     listOf(
+        iosX64(),
         iosArm64(),
         iosSimulatorArm64()
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
             baseName = "ComposeApp"
-            isStatic = true
+            //isStatic = true
+            linkerOpts("-lsqlite3")
         }
     }
     
@@ -52,15 +54,14 @@ kotlin {
             implementation(projects.search.data)
             implementation(projects.search.domain)
             implementation(projects.search.ui)
-
             implementation(projects.game.data)
             implementation(projects.game.domain)
             implementation(projects.game.ui)
 
-
             implementation(projects.favorite.data)
             implementation(projects.favorite.domain)
             implementation(projects.favorite.ui)
+
 
 
 
@@ -78,9 +79,32 @@ kotlin {
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
+        androidMain.dependencies {
+            implementation(projects.coreDatabase)
+            implementation(projects.search.ui)
+            implementation(projects.game.ui)
+            implementation(projects.favorite.ui)
+
+            implementation(libs.androidx.lifecycle.viewmodelCompose)
+            implementation(libs.navigation.compose)
+
+
+        }
+
+        iosMain.dependencies {
+            implementation(projects.coreDatabase)
+            implementation(projects.search.ui)
+            implementation(projects.game.ui)
+            implementation(projects.favorite.ui)
+        }
+
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
+            implementation(projects.coreDatabase)
+            implementation(projects.search.ui)
+            implementation(projects.game.ui)
+            implementation(projects.favorite.ui)
         }
     }
 }

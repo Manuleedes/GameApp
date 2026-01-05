@@ -25,6 +25,7 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -112,7 +113,7 @@ fun GameDetailsScreenContent(
                                 Card(
                                     modifier = Modifier.padding(12.dp).wrapContentSize(),
                                     shape = RoundedCornerShape(12.dp),
-                                    elevation = 6.dp
+                                    elevation = CardDefaults.cardElevation(defaultElevation = 6.dp)
                                 ){
                                     Column(modifier = Modifier.width(150.dp)) {
                                         AsyncImage(model = it.image, contentDescription = null,

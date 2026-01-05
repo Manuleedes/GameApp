@@ -20,6 +20,7 @@ kotlin {
     }
 
     listOf(
+        iosX64(),
         iosArm64(),
         iosSimulatorArm64()
     ).forEach { iosTarget ->
@@ -46,8 +47,12 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
-            implementation(libs.sqldelight.android)
+            //implementation(libs.sqldelight.android)
+            implementation(libs.sqldelight.runtime)
+            api(libs.sqldelight.coroutines)
+
         }
+
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -64,14 +69,16 @@ kotlin {
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
+        val androidMain by getting {
+            dependencies {
+                implementation(libs.sqldelight.android)
+            }
+        }
+
         iosMain.dependencies {
             implementation(libs.sqldelight.native)
         }
-        val jsMain by getting {
-            dependencies {
-                implementation(libs.sqldelight.sqlite)
-            }
-        }
+
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
@@ -115,6 +122,7 @@ sqldelight {
         }
     }
 }
+
 
 
 compose.desktop {
