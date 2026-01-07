@@ -45,7 +45,10 @@ import coil3.compose.AsyncImage
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
-fun GameDetailsScreen(modifier: Modifier = Modifier, id: String, onBackClick: () -> Unit) {
+fun GameDetailsScreen(modifier: Modifier = Modifier,
+                      id: String,
+                      onDeleteSuccess: () -> Unit,
+                      onBackClick: () -> Unit) {
 
     val viewModel = koinViewModel<GameDetailsViewModel>()
     val uiState = viewModel.uiState.collectAsStateWithLifecycle()
@@ -54,10 +57,17 @@ fun GameDetailsScreen(modifier: Modifier = Modifier, id: String, onBackClick: ()
         viewModel.getGameDetails(id.toInt())
     }
 
+    LaunchedEffect(uiState.value.isDeleted) {
+        if (uiState.value.isDeleted) {
+            onDeleteSuccess()
+            viewModel.consumeDeleteEvent()
+        }
+    }
     GameDetailsScreenContent(
         modifier = modifier.fillMaxSize(), uiState = uiState.value,
         onDelete = { viewModel.delete(it) },
-        onSave = { id, name, image -> viewModel.save(id, image, name) },
+        onSave = { id, name, image -> viewModel.toggleFavorite(id, image, name) },
+        isSaved = uiState.value.isSaved,
         onBackClick = onBackClick
     )
 
@@ -69,7 +79,8 @@ fun GameDetailsScreenContent(
     modifier: Modifier = Modifier, uiState: GameDetailsScreen.UiState,
     onDelete: (Int) -> Unit,
     onSave: (id: Int, title: String, image: String) -> Unit,
-    onBackClick: () -> Unit
+    onBackClick: () -> Unit,
+    isSaved: Boolean
 ) {
     if (uiState.isLoading) {
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -105,8 +116,8 @@ fun GameDetailsScreenContent(
                 item {
                     Column(modifier = Modifier.fillMaxWidth()) {
                         Text(text = "Platforms:", style = MaterialTheme.typography.headlineLarge,
-                           modifier = Modifier.padding(horizontal = 12.dp).padding(top = 24.dp)
-                            )
+                            modifier = Modifier.padding(horizontal = 12.dp).padding(top = 24.dp)
+                        )
 
                         LazyRow(modifier = Modifier.fillMaxWidth()) {
                             items(data.platforms){
@@ -120,7 +131,7 @@ fun GameDetailsScreenContent(
                                             modifier = Modifier.background(color = Color.Transparent,
                                                 shape = CircleShape
                                             ).clip(CircleShape)
-                                            )
+                                        )
                                         Text(
                                             modifier = Modifier.padding(vertical = 8.dp),
                                             text = it.name,
@@ -300,8 +311,10 @@ fun GameDetailsScreenContent(
                     modifier = Modifier.background(color = Color.White, shape = CircleShape)
                 ) {
                     Icon(
-                        imageVector = Icons.Default.Favorite, contentDescription = null,
-                        modifier = Modifier.padding(4.dp)
+                        imageVector = Icons.Default.Favorite,
+                        contentDescription = null,
+                        modifier = Modifier.padding(4.dp),
+                        tint = if (isSaved) Color.Red else Color.Gray
                     )
                 }
 
@@ -323,9 +336,5 @@ fun GameDetailsScreenContent(
             }
 
         }
-
-
     }
-
-
 }

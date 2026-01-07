@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import kotlin.invoke
+
 
 class GameDetailsViewModel(
     private val getGameDetailsUseCase: GetGameDetailsUseCase,
@@ -27,9 +27,8 @@ class GameDetailsViewModel(
 
     fun getGameDetails(id: Int) {
         getGameDetailsUseCase.invoke(id)
-            .onStart {
-                _uiState.update { GameDetailsScreen.UiState(isLoading = true) }
-            }.onEach { result ->
+            .onStart { _uiState.update { GameDetailsScreen.UiState(isLoading = true) } }
+            .onEach { result ->
                 result.onSuccess { data ->
                     _uiState.update { GameDetailsScreen.UiState(data = data) }
                 }.onFailure { error ->
@@ -40,11 +39,37 @@ class GameDetailsViewModel(
 
     fun save(id: Int, image: String, name: String) = viewModelScope.launch {
         saveGameUseCase.invoke(id, image, name)
+        _uiState.update { it.copy(isSaved = true)}
     }
 
     fun delete(id: Int) = viewModelScope.launch {
-        deleteUseCase.invoke(id)
+        runCatching {
+            deleteUseCase.invoke(id)
+        }.onSuccess {
+            _uiState.update { it.copy(isDeleted = true) }
+        }.onFailure { error ->
+            _uiState.update { it.copy(error = error.message ?: "Delete failed") }
+        }
     }
+    fun consumeDeleteEvent() {
+        _uiState.update { it.copy(isDeleted = false) }
+    }
+
+    fun toggleFavorite(id: Int, image: String, name: String) = viewModelScope.launch {
+        val currentlySaved = _uiState.value.isSaved
+        if (currentlySaved) {
+            deleteUseCase.invoke(id)
+        } else {
+            // Add to favorites
+            saveGameUseCase.invoke(id, image, name)
+        }
+        // Update UI state
+        _uiState.update { it.copy(isSaved = !currentlySaved) }
+    }
+
+
+
+
 
 }
 
@@ -54,6 +79,8 @@ data object GameDetailsScreen {
     data class UiState(
         val isLoading: Boolean = false,
         val error: String = "",
-        val data: GameDetails? = null
+        val data: GameDetails? = null,
+        val isDeleted: Boolean = false,
+        val isSaved: Boolean = false
     )
 }

@@ -25,8 +25,13 @@ object FavoriteNavGraph: BaseNavGraph {
                     onBackClick = {
                         navHostController.popBackStack()
                     },
-                    onDetails = {
-                        navHostController.navigate(GameNavGraph.Dest.Details.getRoute(it))
+                    onDetails = { gameId ->
+                        navHostController.navigate(
+                            GameNavGraph.Dest.Details.getRoute(
+                                id = gameId,
+                                previous = "favorite"
+                            )
+                        )
                     },
                 )
             }
