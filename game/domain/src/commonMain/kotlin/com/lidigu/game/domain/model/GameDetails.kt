@@ -1,10 +1,10 @@
 package com.lidigu.game.domain.model
 
 data class GameDetails (
-    val name: String,
+    val name: String?,
     val id: Int,
-    val description: String,
-    val backgroundImage: String,
+    val description: String?,
+    val backgroundImage: String?,
     val additionalImage: String?,
     val platforms: List<Platform>,
     val stores: List<Store>,
@@ -13,24 +13,24 @@ data class GameDetails (
 )
 
 data class Platform(
-    val name: String,
-    val image: String
+    val name: String?,
+    val image: String?
 )
 
 data class Store(
-    val name: String,
-    val image: String,
-    val gameCount: Int,
-    val domain: String
+    val name: String?,
+    val image: String?,
+    val gameCount: Int?,
+    val domain: String?
 )
 
 data class Developer(
-    val name: String,
-    val image: String,
-    val gameCount: Int
+    val name: String?,
+    val image: String?,
+    val gameCount: Int?
 )
 
 data class Tag(
-    val name: String,
-    val image: String
+    val name: String?,
+    val image: String?
 )

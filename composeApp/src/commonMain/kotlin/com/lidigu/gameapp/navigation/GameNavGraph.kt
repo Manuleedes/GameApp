@@ -6,11 +6,12 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
+import androidx.savedstate.SavedState
+import androidx.savedstate.read
 import com.lidigu.game.ui.game.GameScreen
 import com.lidigu.game.ui.gameDetails.GameDetailsScreen
 
 object GameNavGraph : BaseNavGraph {
-
 
     sealed class Dest(val route: String) {
         data object Root : Dest("/game-root")
@@ -57,13 +58,9 @@ object GameNavGraph : BaseNavGraph {
             }
             composable(route = Dest.Details.route) { backStackEntry ->
 
-                val id = backStackEntry.arguments
-                    ?.getString("id")
-                    ?: return@composable
-
-                val previous = backStackEntry.arguments
-                    ?.getString("previous")
-                    ?: "game"
+                val args: SavedState = backStackEntry.arguments ?: return@composable
+                val id = args.read { getString("id") }
+                val previous = args.read { if (contains("previous")) getString("previous") else "game" }
 
                 GameDetailsScreen(
                     modifier = modifier.fillMaxSize(),
@@ -88,7 +85,6 @@ object GameNavGraph : BaseNavGraph {
                             else -> navHostController.popBackStack()
                         }
                     }
-
                 )
             }
         }

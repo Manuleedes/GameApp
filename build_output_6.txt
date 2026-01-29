@@ -1,0 +1,598 @@
+Calculating task graph as configuration cache cannot be reused because file 'gradle/libs.versions.toml' has changed.
+Type-safe project accessors is an incubating feature.
+
+> Configure project :composeApp
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.application'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.application' starting with Android Gradle Plugin 9.0.0.
+
+Please change the structure of the your project and move the usage of 'com.android.application' into a separate subproject. The new subproject should add a dependency on this KMP subproject.
+
+Read more: https://kotl.in/kmp-project-structure-migration
+[32m[1mSolution:[0m[0m
+[32m[3mPlease change the structure of your project and move the usage of 'com.android.application' into a separate subproject.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :core-database
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :core-network
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :common:data
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :common:domain
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :common:ui
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :favorite:data
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :favorite:domain
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :favorite:ui
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :game:data
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :game:domain
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :game:ui
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :search:data
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :search:domain
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :search:ui
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Task :composeApp:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :composeApp:kmpPartiallyResolvedDependenciesChecker
+> Task :composeApp:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :composeApp:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :composeApp:generateComposeResClass UP-TO-DATE
+> Task :composeApp:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :composeApp:copyNonXmlValueResourcesForCommonMain UP-TO-DATE
+> Task :core-database:kmpPartiallyResolvedDependenciesChecker
+> Task :composeApp:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :core-database:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :composeApp:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :core-database:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-database:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :composeApp:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :core-database:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :composeApp:prepareComposeResourcesTaskForCommonMain UP-TO-DATE
+> Task :core-database:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :composeApp:generateResourceAccessorsForCommonMain UP-TO-DATE
+> Task :core-database:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :core-database:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :core-database:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :composeApp:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :core-database:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :core-database:generateCommonMainAppDatabaseInterface UP-TO-DATE
+> Task :core-database:generateComposeResClass UP-TO-DATE
+> Task :core-database:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :core-database:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :core-database:assembleJvmMainResources UP-TO-DATE
+> Task :core-network:kmpPartiallyResolvedDependenciesChecker
+> Task :core-network:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core-network:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core-database:jvmProcessResources UP-TO-DATE
+> Task :core-database:processJvmMainResources SKIPPED
+> Task :core-network:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-network:generateComposeResClass UP-TO-DATE
+> Task :core-network:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core-network:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-network:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :core-network:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :core-network:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :core-network:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :core-network:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :common:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :common:domain:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core-network:assembleJvmMainResources UP-TO-DATE
+> Task :core-network:jvmProcessResources UP-TO-DATE
+> Task :core-network:processJvmMainResources SKIPPED
+> Task :core-network:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :common:domain:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:domain:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :common:domain:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :common:domain:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :common:domain:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :common:domain:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :common:domain:generateComposeResClass UP-TO-DATE
+> Task :common:domain:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :common:domain:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :common:domain:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :common:domain:assembleJvmMainResources UP-TO-DATE
+> Task :common:domain:jvmProcessResources UP-TO-DATE
+> Task :common:domain:processJvmMainResources SKIPPED
+> Task :favorite:data:kmpPartiallyResolvedDependenciesChecker
+> Task :favorite:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :favorite:data:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:data:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:data:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :favorite:data:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :favorite:data:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :favorite:data:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :favorite:data:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :favorite:data:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :favorite:data:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :favorite:data:generateComposeResClass UP-TO-DATE
+> Task :favorite:data:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :favorite:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :favorite:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :favorite:domain:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:domain:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:domain:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :favorite:domain:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :favorite:domain:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :favorite:domain:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :favorite:domain:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :favorite:domain:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :favorite:domain:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :favorite:domain:generateComposeResClass UP-TO-DATE
+> Task :favorite:domain:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :favorite:domain:assembleJvmMainResources UP-TO-DATE
+> Task :favorite:domain:jvmProcessResources UP-TO-DATE
+> Task :favorite:domain:processJvmMainResources SKIPPED
+> Task :favorite:data:assembleJvmMainResources UP-TO-DATE
+> Task :favorite:data:jvmProcessResources UP-TO-DATE
+> Task :favorite:data:processJvmMainResources SKIPPED
+> Task :common:ui:kmpPartiallyResolvedDependenciesChecker
+> Task :common:ui:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :common:ui:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:ui:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:ui:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :common:ui:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :common:ui:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :common:ui:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :common:ui:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :common:ui:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :common:ui:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :common:ui:generateComposeResClass UP-TO-DATE
+> Task :common:ui:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :common:ui:assembleJvmMainResources UP-TO-DATE
+> Task :common:ui:jvmProcessResources UP-TO-DATE
+> Task :common:ui:processJvmMainResources SKIPPED
+> Task :favorite:ui:kmpPartiallyResolvedDependenciesChecker
+> Task :favorite:ui:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :favorite:ui:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:ui:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:ui:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :favorite:ui:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :favorite:ui:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :favorite:ui:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :favorite:ui:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :favorite:ui:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :favorite:ui:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :favorite:ui:generateComposeResClass UP-TO-DATE
+> Task :favorite:ui:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :favorite:ui:assembleJvmMainResources UP-TO-DATE
+> Task :favorite:ui:jvmProcessResources UP-TO-DATE
+> Task :favorite:ui:processJvmMainResources SKIPPED
+> Task :common:data:kmpPartiallyResolvedDependenciesChecker
+> Task :common:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :common:data:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:data:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:data:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :common:data:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :common:data:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :common:data:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :common:data:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :common:data:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :common:data:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :common:data:generateComposeResClass UP-TO-DATE
+> Task :common:data:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :common:data:assembleJvmMainResources UP-TO-DATE
+> Task :common:data:jvmProcessResources UP-TO-DATE
+> Task :common:data:processJvmMainResources SKIPPED
+> Task :game:data:kmpPartiallyResolvedDependenciesChecker
+> Task :game:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :game:data:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:data:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:data:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :game:data:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :game:data:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:data:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:data:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :game:data:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :game:data:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :game:data:generateComposeResClass UP-TO-DATE
+> Task :game:data:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :game:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :game:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :game:domain:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:domain:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:domain:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :game:domain:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :game:domain:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:domain:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:domain:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :game:domain:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :game:domain:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :game:domain:generateComposeResClass UP-TO-DATE
+> Task :game:domain:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :game:domain:assembleJvmMainResources UP-TO-DATE
+> Task :game:domain:jvmProcessResources UP-TO-DATE
+> Task :game:domain:processJvmMainResources SKIPPED
+> Task :game:data:assembleJvmMainResources UP-TO-DATE
+> Task :game:data:jvmProcessResources UP-TO-DATE
+> Task :game:data:processJvmMainResources SKIPPED
+> Task :game:ui:kmpPartiallyResolvedDependenciesChecker
+> Task :game:ui:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :game:ui:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:ui:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:ui:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :game:ui:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :game:ui:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:ui:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:ui:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :game:ui:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :game:ui:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :game:ui:generateComposeResClass UP-TO-DATE
+> Task :game:ui:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :game:ui:assembleJvmMainResources UP-TO-DATE
+> Task :game:ui:jvmProcessResources UP-TO-DATE
+> Task :game:ui:processJvmMainResources SKIPPED
+> Task :search:data:kmpPartiallyResolvedDependenciesChecker
+> Task :search:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :search:data:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :search:data:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :search:data:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :search:data:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :search:data:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :search:data:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :search:data:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :search:data:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :search:data:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :search:data:generateComposeResClass UP-TO-DATE
+> Task :search:data:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :search:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :search:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :search:domain:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :search:domain:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :search:domain:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :search:domain:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :search:domain:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :search:domain:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :search:domain:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :search:domain:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :search:domain:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :search:domain:generateComposeResClass UP-TO-DATE
+> Task :search:domain:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :search:domain:assembleJvmMainResources UP-TO-DATE
+> Task :search:domain:jvmProcessResources UP-TO-DATE
+> Task :search:domain:processJvmMainResources SKIPPED
+> Task :search:data:assembleJvmMainResources UP-TO-DATE
+> Task :search:data:jvmProcessResources UP-TO-DATE
+> Task :search:data:processJvmMainResources SKIPPED
+> Task :search:ui:kmpPartiallyResolvedDependenciesChecker
+> Task :search:ui:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :search:ui:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :search:ui:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :search:ui:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :search:ui:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :search:ui:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :search:ui:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :search:ui:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :search:ui:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :search:ui:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :search:ui:generateComposeResClass UP-TO-DATE
+> Task :search:ui:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :search:ui:assembleJvmMainResources UP-TO-DATE
+> Task :search:ui:jvmProcessResources UP-TO-DATE
+> Task :search:ui:processJvmMainResources SKIPPED
+> Task :composeApp:assembleJvmMainResources UP-TO-DATE
+> Task :composeApp:jvmProcessResources UP-TO-DATE
+> Task :composeApp:processJvmMainResources SKIPPED
+> Task :composeApp:prepareAppResources NO-SOURCE
+> Task :common:domain:compileKotlinJvm
+> Task :common:domain:compileJvmMainJava NO-SOURCE
+> Task :common:domain:jvmMainClasses
+> Task :common:domain:jvmJar UP-TO-DATE
+> Task :core-database:compileKotlinJvm
+> Task :core-database:compileJvmMainJava NO-SOURCE
+> Task :core-database:jvmMainClasses
+> Task :core-database:jvmJar UP-TO-DATE
+> Task :core-network:compileKotlinJvm
+> Task :core-network:compileJvmMainJava NO-SOURCE
+> Task :core-network:jvmMainClasses
+> Task :core-network:jvmJar UP-TO-DATE
+> Task :game:domain:compileKotlinJvm
+> Task :game:domain:compileJvmMainJava NO-SOURCE
+> Task :game:domain:jvmMainClasses
+> Task :game:domain:jvmJar UP-TO-DATE
+> Task :favorite:domain:compileKotlinJvm
+> Task :favorite:domain:compileJvmMainJava NO-SOURCE
+> Task :favorite:domain:jvmMainClasses
+> Task :favorite:domain:jvmJar UP-TO-DATE
+> Task :common:data:compileKotlinJvm
+> Task :common:ui:compileKotlinJvm
+> Task :common:data:compileJvmMainJava NO-SOURCE
+> Task :common:data:jvmMainClasses
+> Task :common:ui:compileJvmMainJava NO-SOURCE
+> Task :common:ui:jvmMainClasses
+> Task :common:data:jvmJar UP-TO-DATE
+> Task :game:ui:compileKotlinJvm FROM-CACHE
+> Task :game:ui:compileJvmMainJava NO-SOURCE
+> Task :game:ui:jvmMainClasses UP-TO-DATE
+> Task :common:ui:jvmJar UP-TO-DATE
+> Task :game:ui:jvmJar UP-TO-DATE
+> Task :favorite:data:compileKotlinJvm
+> Task :favorite:data:compileJvmMainJava NO-SOURCE
+> Task :favorite:data:jvmMainClasses
+> Task :search:domain:compileKotlinJvm
+> Task :favorite:ui:compileKotlinJvm FROM-CACHE
+> Task :search:domain:compileJvmMainJava NO-SOURCE
+> Task :favorite:data:jvmJar UP-TO-DATE
+> Task :search:domain:jvmMainClasses
+> Task :favorite:ui:compileJvmMainJava NO-SOURCE
+> Task :favorite:ui:jvmMainClasses UP-TO-DATE
+> Task :search:domain:jvmJar UP-TO-DATE
+> Task :favorite:ui:jvmJar UP-TO-DATE
+> Task :game:data:compileKotlinJvm
+> Task :game:data:compileJvmMainJava NO-SOURCE
+> Task :game:data:jvmMainClasses
+> Task :search:ui:compileKotlinJvm FROM-CACHE
+> Task :search:ui:compileJvmMainJava NO-SOURCE
+> Task :search:ui:jvmMainClasses UP-TO-DATE
+> Task :game:data:jvmJar UP-TO-DATE
+> Task :search:ui:jvmJar UP-TO-DATE
+> Task :search:data:compileKotlinJvm
+> Task :search:data:compileJvmMainJava NO-SOURCE
+> Task :search:data:jvmMainClasses
+> Task :search:data:jvmJar UP-TO-DATE
+> Task :composeApp:compileKotlinJvm
+> Task :composeApp:compileJvmMainJava NO-SOURCE
+> Task :composeApp:jvmMainClasses
+> Task :composeApp:jvmJar UP-TO-DATE
+
+> Task :composeApp:run
+Exception in thread "main" java.lang.NoSuchMethodError: 'void androidx.savedstate.SavedStateRegistryController.performRestore(androidx.core.bundle.Bundle)'
+	at androidx.navigation.NavBackStackEntry.updateState(NavBackStackEntry.jb.kt:153)
+	at androidx.navigation.NavBackStackEntry.setMaxLifecycle(NavBackStackEntry.jb.kt:134)
+	at androidx.navigation.NavController.updateBackStackLifecycle$navigation_runtime(NavController.jb.kt:811)
+	at androidx.navigation.NavController.dispatchOnDestinationChanged(NavController.jb.kt:703)
+	at androidx.navigation.NavController.navigate(NavController.jb.kt:1125)
+	at androidx.navigation.NavController.onGraphCreated(NavController.jb.kt:934)
+	at androidx.navigation.NavController.setGraph(NavController.jb.kt:851)
+	at androidx.navigation.NavController.setGraph(NavController.jb.kt:58)
+	at androidx.navigation.compose.NavHostKt.NavHost(NavHost.kt:516)
+	at androidx.navigation.compose.NavHostKt.NavHost(NavHost.kt:231)
+	at com.lidigu.gameapp.ComposableSingletons$AppKt.lambda__1670401222$lambda$0(App.kt:24)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:390)
+	at androidx.compose.material3.TextKt.ProvideTextStyle(Text.kt:462)
+	at androidx.compose.material3.MaterialThemeKt$MaterialTheme$2.invoke(MaterialTheme.kt:107)
+	at androidx.compose.material3.MaterialThemeKt$MaterialTheme$2.invoke(MaterialTheme.kt:106)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:370)
+	at androidx.compose.material3.MaterialThemeKt.MaterialTheme(MaterialTheme.kt:99)
+	at androidx.compose.material3.MaterialThemeKt.MaterialTheme(MaterialTheme.kt:60)
+	at com.lidigu.gameapp.AppKt.App(App.kt:21)
+	at com.lidigu.gameapp.ComposableSingletons$MainKt.lambda_39006006$lambda$0(main.kt:14)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:130)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.ui.awt.ComposeWindow$setContent$5.invoke(ComposeWindow.desktop.kt:161)
+	at androidx.compose.ui.awt.ComposeWindow$setContent$5.invoke(ComposeWindow.desktop.kt:160)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.ui.awt.WindowContentLayout_desktopKt.WindowContentLayout(WindowContentLayout.desktop.kt:110)
+	at androidx.compose.ui.awt.ComposeWindowPanel$setContent$3$1.invoke(ComposeWindowPanel.desktop.kt:146)
+	at androidx.compose.ui.awt.ComposeWindowPanel$setContent$3$1.invoke(ComposeWindowPanel.desktop.kt:145)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:390)
+	at androidx.compose.ui.awt.ComposeWindowPanel$setContent$3.invoke(ComposeWindowPanel.desktop.kt:143)
+	at androidx.compose.ui.awt.ComposeWindowPanel$setContent$3.invoke(ComposeWindowPanel.desktop.kt:142)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.ui.scene.ComposeContainer$setContent$1$1.invoke(ComposeContainer.desktop.kt:385)
+	at androidx.compose.ui.scene.ComposeContainer$setContent$1$1.invoke(ComposeContainer.desktop.kt:384)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:370)
+	at androidx.compose.ui.scene.ComposeContainer_desktopKt.ProvideContainerCompositionLocals(ComposeContainer.desktop.kt:579)
+	at androidx.compose.ui.scene.ComposeContainer_desktopKt.access$ProvideContainerCompositionLocals(ComposeContainer.desktop.kt:1)
+	at androidx.compose.ui.scene.ComposeContainer$setContent$1.invoke(ComposeContainer.desktop.kt:384)
+	at androidx.compose.ui.scene.ComposeContainer$setContent$1.invoke(ComposeContainer.desktop.kt:383)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.ui.scene.ComposeSceneMediator$setContent$1$1$1$1.invoke(ComposeSceneMediator.desktop.kt:596)
+	at androidx.compose.ui.scene.ComposeSceneMediator$setContent$1$1$1$1.invoke(ComposeSceneMediator.desktop.kt:595)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.ui.layout.OverlayLayout_skikoKt.OverlayLayout(OverlayLayout.skiko.kt:81)
+	at androidx.compose.ui.viewinterop.InteropContainer_skikoKt.TrackInteropPlacementContainer(InteropContainer.skiko.kt:138)
+	at androidx.compose.ui.viewinterop.SwingInteropContainer$invoke$1.invoke(SwingInteropContainer.desktop.kt:276)
+	at androidx.compose.ui.viewinterop.SwingInteropContainer$invoke$1.invoke(SwingInteropContainer.desktop.kt:275)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:390)
+	at androidx.compose.ui.viewinterop.SwingInteropContainer.invoke(SwingInteropContainer.desktop.kt:273)
+	at androidx.compose.ui.scene.ComposeSceneMediator$setContent$1$1$1.invoke(ComposeSceneMediator.desktop.kt:595)
+	at androidx.compose.ui.scene.ComposeSceneMediator$setContent$1$1$1.invoke(ComposeSceneMediator.desktop.kt:594)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:370)
+	at androidx.compose.ui.scene.BaseComposeScene$setContent$1$2.invoke(BaseComposeScene.skiko.kt:150)
+	at androidx.compose.ui.scene.BaseComposeScene$setContent$1$2.invoke(BaseComposeScene.skiko.kt:149)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:370)
+	at androidx.compose.ui.platform.CompositionLocalsKt.ProvideCommonCompositionLocals(CompositionLocals.kt:216)
+	at androidx.compose.ui.platform.Wrapper_skikoKt$setContent$2$1.invoke(Wrapper.skiko.kt:47)
+	at androidx.compose.ui.platform.Wrapper_skikoKt$setContent$2$1.invoke(Wrapper.skiko.kt:46)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:370)
+	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:410)
+	at androidx.compose.ui.platform.Wrapper_skikoKt.provide(Wrapper.skiko.kt:60)
+	at androidx.compose.ui.platform.Wrapper_skikoKt.access$provide(Wrapper.skiko.kt:1)
+	at androidx.compose.ui.platform.Wrapper_skikoKt$setContent$2.invoke(Wrapper.skiko.kt:46)
+	at androidx.compose.ui.platform.Wrapper_skikoKt$setContent$2.invoke(Wrapper.skiko.kt:45)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.runtime.internal.Expect_jvmKt.invokeComposable(Expect.jvm.kt:24)
+	at androidx.compose.runtime.ComposerImpl.doCompose-aFTiNEg(Composer.kt:3843)
+	at androidx.compose.runtime.ComposerImpl.composeContent--ZbOJvo$runtime(Composer.kt:3747)
+	at androidx.compose.runtime.CompositionImpl.composeContent(Composition.kt:832)
+	at androidx.compose.runtime.Recomposer.composeInitial$runtime(Recomposer.kt:1233)
+	at androidx.compose.runtime.CompositionImpl.composeInitial(Composition.kt:672)
+	at androidx.compose.runtime.CompositionImpl.setContent(Composition.kt:639)
+	at androidx.compose.ui.platform.Wrapper_skikoKt.setContent(Wrapper.skiko.kt:45)
+	at androidx.compose.ui.scene.CanvasLayersComposeSceneImpl.createComposition(CanvasLayersComposeScene.skiko.kt:215)
+	at androidx.compose.ui.scene.BaseComposeScene.setContent(BaseComposeScene.skiko.kt:149)
+	at androidx.compose.ui.scene.ComposeSceneMediator.setContent$lambda$14(ComposeSceneMediator.desktop.kt:594)
+	at androidx.compose.ui.scene.ComposeSceneMediator.onComponentAttached(ComposeSceneMediator.desktop.kt:564)
+	at androidx.compose.ui.scene.ComposeContainer.addNotify(ComposeContainer.desktop.kt:324)
+	at androidx.compose.ui.awt.ComposeWindowPanel.addNotify(ComposeWindowPanel.desktop.kt:123)
+	at java.desktop/java.awt.Container.addNotify(Container.java:2804)
+	at java.desktop/javax.swing.JComponent.addNotify(JComponent.java:4839)
+	at java.desktop/java.awt.Container.addNotify(Container.java:2804)
+	at java.desktop/javax.swing.JComponent.addNotify(JComponent.java:4839)
+	at java.desktop/java.awt.Container.addNotify(Container.java:2804)
+	at java.desktop/javax.swing.JComponent.addNotify(JComponent.java:4839)
+	at java.desktop/javax.swing.JRootPane.addNotify(JRootPane.java:721)
+	at java.desktop/java.awt.Container.addNotify(Container.java:2804)
+	at java.desktop/java.awt.Window.addNotify(Window.java:791)
+	at java.desktop/java.awt.Frame.addNotify(Frame.java:495)
+	at java.desktop/java.awt.Window.pack(Window.java:829)
+	at androidx.compose.ui.util.Windows_desktopKt.setSizeImpl-6HolHcs(Windows.desktop.kt:115)
+	at androidx.compose.ui.util.Windows_desktopKt.setSizeSafely-hQcJfNw(Windows.desktop.kt:54)
+	at androidx.compose.ui.awt.SwingWindow_desktopKt.SwingWindow$lambda$37$lambda$36(SwingWindow.desktop.kt:294)
+	at androidx.compose.ui.awt.SwingWindow_desktopKt.SwingWindow$lambda$12$lambda$11(SwingWindow.desktop.kt:130)
+	at androidx.compose.ui.awt.AwtWindow_desktopKt.AwtWindow$lambda$7$lambda$6(AwtWindow.desktop.kt:77)
+	at androidx.compose.ui.util.UpdateEffect_desktopKt.UpdateEffect$lambda$8$lambda$7$performUpdate$lambda$4(UpdateEffect.desktop.kt:59)
+	at androidx.compose.runtime.snapshots.Snapshot$Companion.observe(Snapshot.kt:2495)
+	at androidx.compose.runtime.snapshots.SnapshotStateObserver$ObservedScopeMap.observe(SnapshotStateObserver.kt:464)
+	at androidx.compose.runtime.snapshots.SnapshotStateObserver.observeReads(SnapshotStateObserver.kt:248)
+	at androidx.compose.ui.util.UpdateEffect_desktopKt.UpdateEffect$lambda$8$lambda$7$performUpdate(UpdateEffect.desktop.kt:55)
+	at androidx.compose.ui.util.UpdateEffect_desktopKt.UpdateEffect$lambda$8$lambda$7(UpdateEffect.desktop.kt:64)
+	at androidx.compose.runtime.DisposableEffectImpl.onRemembered(Effects.kt:85)
+	at androidx.compose.runtime.internal.RememberEventDispatcher.dispatchRememberList(RememberEventDispatcher.kt:253)
+	at androidx.compose.runtime.internal.RememberEventDispatcher.dispatchRememberObservers(RememberEventDispatcher.kt:225)
+	at androidx.compose.runtime.CompositionImpl.applyChangesInLocked(Composition.kt:1122)
+	at androidx.compose.runtime.CompositionImpl.applyChanges(Composition.kt:1149)
+	at androidx.compose.runtime.Recomposer.composeInitial$runtime(Recomposer.kt:1266)
+	at androidx.compose.runtime.CompositionImpl.composeInitial(Composition.kt:672)
+	at androidx.compose.runtime.CompositionImpl.setContent(Composition.kt:639)
+	at androidx.compose.ui.window.Application_desktopKt$awaitApplication$2$1$2.invokeSuspend(Application.desktop.kt:219)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+
+> Task :composeApp:run FAILED
+
+[Incubating] Problems report is available at: file:///home/lidigu/Documents/GameApp/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':composeApp:run'.
+> Process 'command '/usr/lib/jvm/java-17-openjdk-amd64/bin/java'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 2m 31s
+125 actionable tasks: 28 executed, 3 from cache, 94 up-to-date
+Configuration cache entry stored.

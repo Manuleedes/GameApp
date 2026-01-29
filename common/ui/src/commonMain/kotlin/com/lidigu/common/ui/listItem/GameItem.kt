@@ -40,7 +40,7 @@ fun GameItem(modifier: Modifier,
     ) {
         Box(Modifier.fillMaxSize()) {
             AsyncImage(
-                model = item.imageBackground, contentDescription = null,
+                model = item.imageBackground, contentDescription = item.name,
                 modifier = Modifier.fillMaxWidth().height(350.dp),
                 contentScale = ContentScale.Crop
             )
@@ -48,12 +48,12 @@ fun GameItem(modifier: Modifier,
             Box(
                 modifier = Modifier.padding(horizontal = 12.dp, vertical = 12.dp)
                     .background(
-                        color = Color.White,
+                        color = Color.White.copy(alpha = 0.8f),
                         shape = RoundedCornerShape(12.dp)
                     ).fillMaxWidth().align(Alignment.BottomCenter),
             ) {
                 Text(
-                    item.name, style = MaterialTheme.typography.bodySmall,
+                    item.name ?: "Unknown", style = MaterialTheme.typography.bodySmall,
                     modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis

@@ -1,5 +1,6 @@
 package com.lidigu.search.ui
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -93,7 +94,6 @@ fun SearchScreenContent(
             )
         }
     ) { paddingValues ->
-
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -105,7 +105,6 @@ fun SearchScreenContent(
                         modifier = Modifier.align(Alignment.Center)
                     )
                 }
-
                 uiState.error.isNotBlank() -> {
                     Text(
                         text = uiState.error,
@@ -118,16 +117,51 @@ fun SearchScreenContent(
                         modifier = Modifier.fillMaxSize()
                     ) {
                         items(uiState.data) { item ->
-                            AsyncImage(
-                                model = item.imageBackground,
-                                contentDescription = null,
+                            Box(
                                 modifier = Modifier
                                     .padding(12.dp)
                                     .height(250.dp)
                                     .clip(RoundedCornerShape(12.dp))
-                                    .clickable { onClick(item.id) },
-                                contentScale = ContentScale.Crop
-                            )
+                                    .clickable { onClick(item.id) }
+                            ) {
+                                if (item.imageBackground != null) {
+                                    AsyncImage(
+                                        model = item.imageBackground,
+                                        contentDescription = item.name,
+                                        modifier = Modifier.fillMaxSize(),
+                                        contentScale = ContentScale.Crop
+                                    )
+                                } else {
+                                    Box(
+                                        modifier = Modifier
+                                            .fillMaxSize()
+                                            .background(MaterialTheme.colorScheme.surfaceVariant),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Text(
+                                            text = item.name ?: "Unknown Game",
+                                            style = MaterialTheme.typography.bodyMedium,
+                                            modifier = Modifier.padding(8.dp)
+                                        )
+                                    }
+                                }
+                                
+                                // Optional: Always show name at the bottom for clarity
+                                Box(
+                                    modifier = Modifier
+                                        .align(Alignment.BottomCenter)
+                                        .fillMaxWidth()
+                                        .background(Color.Black.copy(alpha = 0.5f))
+                                        .padding(8.dp)
+                                ) {
+                                    Text(
+                                        text = item.name ?: "Unknown",
+                                        color = Color.White,
+                                        style = MaterialTheme.typography.labelSmall,
+                                        maxLines = 1
+                                    )
+                                }
+                            }
                         }
                     }
                 }

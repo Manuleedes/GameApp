@@ -4,5 +4,5 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class GameResponse(
-    val results: List<Result>
+    val results: List<Result> = emptyList()
 )

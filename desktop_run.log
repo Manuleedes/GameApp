@@ -1,0 +1,384 @@
+Reusing configuration cache.
+> Task :composeApp:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :composeApp:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :composeApp:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :composeApp:kmpPartiallyResolvedDependenciesChecker
+> Task :composeApp:generateComposeResClass UP-TO-DATE
+> Task :composeApp:copyNonXmlValueResourcesForCommonMain UP-TO-DATE
+> Task :composeApp:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :composeApp:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :composeApp:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :composeApp:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core-database:kmpPartiallyResolvedDependenciesChecker
+> Task :core-database:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core-database:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :composeApp:prepareComposeResourcesTaskForCommonMain UP-TO-DATE
+> Task :composeApp:generateResourceAccessorsForCommonMain UP-TO-DATE
+> Task :core-database:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core-database:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-database:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :composeApp:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :core-database:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :core-database:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :core-database:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :core-database:generateComposeResClass UP-TO-DATE
+> Task :core-database:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :core-database:generateCommonMainAppDatabaseInterface UP-TO-DATE
+> Task :core-database:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :core-network:kmpPartiallyResolvedDependenciesChecker
+> Task :core-network:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core-network:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core-database:assembleJvmMainResources UP-TO-DATE
+> Task :core-network:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-database:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :core-network:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core-database:jvmProcessResources UP-TO-DATE
+> Task :core-database:processJvmMainResources SKIPPED
+> Task :core-network:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-network:generateComposeResClass UP-TO-DATE
+> Task :core-network:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :core-network:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :core-network:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :core-network:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :core-network:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :common:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :common:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core-network:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :common:domain:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core-network:assembleJvmMainResources UP-TO-DATE
+> Task :common:domain:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core-network:jvmProcessResources UP-TO-DATE
+> Task :common:domain:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :core-network:processJvmMainResources SKIPPED
+> Task :common:domain:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :common:domain:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :common:domain:generateComposeResClass UP-TO-DATE
+> Task :common:domain:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :common:domain:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :core-database:compileKotlinJvm UP-TO-DATE
+> Task :core-database:compileJvmMainJava NO-SOURCE
+> Task :favorite:data:kmpPartiallyResolvedDependenciesChecker
+> Task :common:domain:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :common:domain:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :core-database:jvmMainClasses UP-TO-DATE
+> Task :common:domain:assembleJvmMainResources UP-TO-DATE
+> Task :core-database:jvmJar UP-TO-DATE
+> Task :favorite:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :common:domain:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :common:domain:jvmProcessResources UP-TO-DATE
+> Task :common:domain:processJvmMainResources SKIPPED
+> Task :favorite:data:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:data:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:data:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-network:compileKotlinJvm UP-TO-DATE
+> Task :favorite:data:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :favorite:data:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :favorite:data:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :core-network:compileJvmMainJava NO-SOURCE
+> Task :core-network:jvmMainClasses UP-TO-DATE
+> Task :favorite:data:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :favorite:data:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :favorite:data:generateComposeResClass UP-TO-DATE
+> Task :favorite:data:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :favorite:data:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :core-network:jvmJar UP-TO-DATE
+> Task :common:domain:compileKotlinJvm UP-TO-DATE
+> Task :favorite:domain:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :common:domain:compileJvmMainJava NO-SOURCE
+> Task :common:domain:jvmMainClasses UP-TO-DATE
+> Task :favorite:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :favorite:domain:generateComposeResClass UP-TO-DATE
+> Task :favorite:domain:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :favorite:domain:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :favorite:domain:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:domain:jvmJar UP-TO-DATE
+> Task :favorite:domain:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :favorite:domain:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :favorite:domain:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :favorite:domain:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :favorite:domain:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :common:ui:kmpPartiallyResolvedDependenciesChecker
+> Task :common:ui:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :favorite:data:assembleJvmMainResources UP-TO-DATE
+> Task :favorite:domain:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :favorite:domain:assembleJvmMainResources UP-TO-DATE
+> Task :favorite:data:jvmProcessResources UP-TO-DATE
+> Task :favorite:data:processJvmMainResources SKIPPED
+> Task :common:ui:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:domain:jvmProcessResources UP-TO-DATE
+> Task :favorite:domain:processJvmMainResources SKIPPED
+> Task :common:ui:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :common:ui:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :common:ui:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:ui:generateComposeResClass UP-TO-DATE
+> Task :common:ui:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :common:ui:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :common:ui:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :common:ui:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :favorite:ui:kmpPartiallyResolvedDependenciesChecker
+> Task :common:ui:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :common:ui:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :favorite:domain:compileKotlinJvm UP-TO-DATE
+> Task :favorite:ui:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :favorite:ui:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:ui:assembleJvmMainResources UP-TO-DATE
+> Task :favorite:domain:compileJvmMainJava NO-SOURCE
+> Task :common:ui:jvmProcessResources UP-TO-DATE
+> Task :favorite:domain:jvmMainClasses UP-TO-DATE
+> Task :favorite:ui:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:ui:processJvmMainResources SKIPPED
+> Task :favorite:domain:jvmJar UP-TO-DATE
+> Task :favorite:ui:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :favorite:ui:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :favorite:ui:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :favorite:ui:generateComposeResClass UP-TO-DATE
+> Task :favorite:ui:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :favorite:ui:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :favorite:ui:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :favorite:ui:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :favorite:ui:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :common:data:kmpPartiallyResolvedDependenciesChecker
+> Task :favorite:ui:assembleJvmMainResources UP-TO-DATE
+> Task :common:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :favorite:ui:jvmProcessResources UP-TO-DATE
+> Task :favorite:data:compileKotlinJvm UP-TO-DATE
+> Task :common:ui:compileKotlinJvm UP-TO-DATE
+> Task :common:data:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:ui:processJvmMainResources SKIPPED
+> Task :favorite:data:compileJvmMainJava NO-SOURCE
+> Task :favorite:data:jvmMainClasses UP-TO-DATE
+> Task :common:data:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :common:data:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :common:ui:compileJvmMainJava NO-SOURCE
+> Task :common:ui:jvmMainClasses UP-TO-DATE
+> Task :common:data:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:data:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :favorite:data:jvmJar UP-TO-DATE
+> Task :common:ui:jvmJar UP-TO-DATE
+> Task :common:data:generateComposeResClass UP-TO-DATE
+> Task :common:data:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :common:data:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :common:data:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :game:data:kmpPartiallyResolvedDependenciesChecker
+> Task :game:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :common:data:assembleJvmMainResources UP-TO-DATE
+> Task :common:data:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :common:data:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :common:data:jvmProcessResources UP-TO-DATE
+> Task :common:data:processJvmMainResources SKIPPED
+> Task :game:data:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:data:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:data:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:data:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:data:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :game:data:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :game:data:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :game:data:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :game:data:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :game:data:generateComposeResClass UP-TO-DATE
+> Task :game:data:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :game:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :game:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :favorite:ui:compileKotlinJvm UP-TO-DATE
+> Task :game:domain:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:data:compileKotlinJvm UP-TO-DATE
+> Task :game:domain:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:ui:compileJvmMainJava NO-SOURCE
+> Task :favorite:ui:jvmMainClasses UP-TO-DATE
+> Task :game:domain:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:domain:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :favorite:ui:jvmJar UP-TO-DATE
+> Task :game:domain:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :common:data:compileJvmMainJava NO-SOURCE
+> Task :game:domain:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :common:data:jvmMainClasses UP-TO-DATE
+> Task :game:domain:generateComposeResClass UP-TO-DATE
+> Task :game:domain:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :game:domain:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :game:domain:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :game:data:assembleJvmMainResources UP-TO-DATE
+> Task :game:ui:kmpPartiallyResolvedDependenciesChecker
+> Task :common:data:jvmJar UP-TO-DATE
+> Task :game:ui:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :game:domain:assembleJvmMainResources UP-TO-DATE
+> Task :game:ui:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:domain:jvmProcessResources UP-TO-DATE
+> Task :game:domain:processJvmMainResources SKIPPED
+> Task :game:data:jvmProcessResources UP-TO-DATE
+> Task :game:data:processJvmMainResources SKIPPED
+> Task :game:domain:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :game:ui:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:ui:generateComposeResClass UP-TO-DATE
+> Task :game:ui:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:ui:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :game:ui:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :game:ui:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:ui:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :game:ui:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :search:data:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :search:data:kmpPartiallyResolvedDependenciesChecker
+> Task :game:ui:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :search:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :search:data:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:ui:assembleJvmMainResources UP-TO-DATE
+> Task :game:ui:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :game:ui:jvmProcessResources UP-TO-DATE
+> Task :game:ui:processJvmMainResources SKIPPED
+> Task :search:data:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :search:data:generateComposeResClass UP-TO-DATE
+> Task :search:data:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :search:data:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :search:data:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :search:data:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :search:data:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :game:domain:compileKotlinJvm UP-TO-DATE
+> Task :search:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :search:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :search:domain:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:domain:compileJvmMainJava NO-SOURCE
+> Task :game:domain:jvmMainClasses UP-TO-DATE
+> Task :search:data:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :search:domain:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :search:domain:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :search:data:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :game:domain:jvmJar UP-TO-DATE
+> Task :search:domain:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :search:domain:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :search:domain:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :search:domain:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :search:domain:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :search:domain:generateComposeResClass UP-TO-DATE
+> Task :search:domain:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :search:domain:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :search:domain:assembleJvmMainResources UP-TO-DATE
+> Task :game:data:compileKotlinJvm UP-TO-DATE
+> Task :search:domain:jvmProcessResources UP-TO-DATE
+> Task :search:domain:processJvmMainResources SKIPPED
+> Task :game:data:compileJvmMainJava NO-SOURCE
+> Task :search:data:assembleJvmMainResources UP-TO-DATE
+> Task :game:data:jvmMainClasses UP-TO-DATE
+> Task :game:data:jvmJar UP-TO-DATE
+> Task :search:data:jvmProcessResources UP-TO-DATE
+> Task :search:data:processJvmMainResources SKIPPED
+> Task :game:ui:compileKotlinJvm UP-TO-DATE
+> Task :game:ui:compileJvmMainJava NO-SOURCE
+> Task :search:ui:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :search:domain:compileKotlinJvm UP-TO-DATE
+> Task :game:ui:jvmMainClasses UP-TO-DATE
+> Task :search:ui:kmpPartiallyResolvedDependenciesChecker
+> Task :search:ui:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :search:ui:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :search:domain:compileJvmMainJava NO-SOURCE
+> Task :game:ui:jvmJar UP-TO-DATE
+> Task :search:ui:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :search:domain:jvmMainClasses UP-TO-DATE
+> Task :search:ui:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :search:ui:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :search:domain:jvmJar UP-TO-DATE
+> Task :search:ui:generateComposeResClass UP-TO-DATE
+> Task :search:ui:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :search:ui:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :search:ui:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :composeApp:assembleJvmMainResources UP-TO-DATE
+> Task :search:ui:assembleJvmMainResources UP-TO-DATE
+> Task :composeApp:prepareAppResources NO-SOURCE
+> Task :search:ui:jvmProcessResources UP-TO-DATE
+> Task :search:ui:processJvmMainResources SKIPPED
+> Task :composeApp:jvmProcessResources UP-TO-DATE
+> Task :search:ui:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :composeApp:processJvmMainResources SKIPPED
+> Task :search:ui:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :search:data:compileKotlinJvm UP-TO-DATE
+> Task :search:data:compileJvmMainJava NO-SOURCE
+> Task :search:data:jvmMainClasses UP-TO-DATE
+> Task :search:data:jvmJar UP-TO-DATE
+> Task :search:ui:compileKotlinJvm UP-TO-DATE
+> Task :search:ui:compileJvmMainJava NO-SOURCE
+> Task :search:ui:jvmMainClasses UP-TO-DATE
+> Task :search:ui:jvmJar UP-TO-DATE
+> Task :composeApp:compileKotlinJvm UP-TO-DATE
+> Task :composeApp:compileJvmMainJava NO-SOURCE
+> Task :composeApp:jvmMainClasses UP-TO-DATE
+> Task :composeApp:jvmJar UP-TO-DATE
+
+> Task :composeApp:run
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+Exception in thread "AWT-EventQueue-0" java.lang.ClassCastException: class androidx.savedstate.SavedState cannot be cast to class java.util.Map (androidx.savedstate.SavedState is in unnamed module of loader 'app'; java.util.Map is in module java.base of loader 'bootstrap')
+	at com.lidigu.gameapp.navigation.GameNavGraph.build$lambda$0$1(GameNavGraph.kt:61)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:142)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.navigation.compose.NavHostKt__NavHostKt$NavHost$20$1.invoke(NavHost.kt:743)
+	at androidx.navigation.compose.NavHostKt__NavHostKt$NavHost$20$1.invoke(NavHost.kt:740)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:370)
+	at androidx.compose.runtime.saveable.SaveableStateHolderImpl.SaveableStateProvider(SaveableStateHolder.kt:82)
+	at androidx.navigation.compose.NavBackStackEntryProviderKt.SaveableStateProvider(NavBackStackEntryProvider.kt:69)
+	at androidx.navigation.compose.NavBackStackEntryProviderKt.access$SaveableStateProvider(NavBackStackEntryProvider.kt:1)
+	at androidx.navigation.compose.NavBackStackEntryProviderKt$LocalOwnersProvider$1.invoke(NavBackStackEntryProvider.kt:56)
+	at androidx.navigation.compose.NavBackStackEntryProviderKt$LocalOwnersProvider$1.invoke(NavBackStackEntryProvider.kt:55)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:370)
+	at androidx.navigation.compose.NavBackStackEntryProviderKt.LocalOwnersProvider(NavBackStackEntryProvider.kt:51)
+	at androidx.navigation.compose.NavHostKt__NavHostKt$NavHost$20.invoke(NavHost.kt:740)
+	at androidx.navigation.compose.NavHostKt__NavHostKt$NavHost$20.invoke(NavHost.kt:720)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:142)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.animation.AnimatedContentKt$AnimatedContent$6$1$5.invoke(AnimatedContent.kt:863)
+	at androidx.compose.animation.AnimatedContentKt$AnimatedContent$6$1$5.invoke(AnimatedContent.kt:853)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:130)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.animation.AnimatedVisibilityKt.AnimatedEnterExitImpl(AnimatedVisibility.kt:752)
+	at androidx.compose.animation.AnimatedContentKt$AnimatedContent$6$1.invoke(AnimatedContent.kt:835)
+	at androidx.compose.animation.AnimatedContentKt$AnimatedContent$6$1.invoke(AnimatedContent.kt:818)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:121)
+	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.kt:51)
+	at androidx.compose.animation.AnimatedContentKt.AnimatedContent(AnimatedContent.kt:873)
+	at androidx.navigation.compose.NavHostKt__NavHostKt.NavHost(NavHost.kt:692)
+	at androidx.navigation.compose.NavHostKt.NavHost(Unknown Source)
+	at androidx.navigation.compose.NavHostKt__NavHostKt.NavHost$lambda$56$NavHostKt__NavHostKt(NavHost.kt)
+	at androidx.compose.runtime.RecomposeScopeImpl.compose(RecomposeScopeImpl.kt:196)
+	at androidx.compose.runtime.ComposerImpl.recomposeToGroupEnd(Composer.kt:2895)
+	at androidx.compose.runtime.ComposerImpl.skipCurrentGroup(Composer.kt:3231)
+	at androidx.compose.runtime.ComposerImpl.doCompose-aFTiNEg(Composer.kt:3855)
+	at androidx.compose.runtime.ComposerImpl.recompose-aFTiNEg$runtime(Composer.kt:3779)
+	at androidx.compose.runtime.CompositionImpl.recompose(Composition.kt:1075)
+	at androidx.compose.runtime.Recomposer.performRecompose(Recomposer.kt:1373)
+	at androidx.compose.runtime.Recomposer.access$performRecompose(Recomposer.kt:156)
+	at androidx.compose.runtime.Recomposer$runRecomposeAndApplyChanges$2.invokeSuspend$lambda$22(Recomposer.kt:627)
+	at androidx.compose.runtime.BroadcastFrameClock$FrameAwaiter.resume(BroadcastFrameClock.kt:57)
+	at androidx.compose.runtime.BroadcastFrameClock.sendFrame(BroadcastFrameClock.kt:90)
+	at androidx.compose.ui.scene.BaseComposeScene.render(BaseComposeScene.skiko.kt:177)
+	at androidx.compose.ui.scene.ComposeSceneMediator.onRender$lambda$23$lambda$22(ComposeSceneMediator.desktop.kt:649)
+	at androidx.compose.ui.viewinterop.SwingInteropContainer.postponingExecutingScheduledUpdates(SwingInteropContainer.desktop.kt:251)
+	at androidx.compose.ui.scene.ComposeSceneMediator.onRender(ComposeSceneMediator.desktop.kt:647)
+	at org.jetbrains.skiko.SkiaLayer.update$skiko(SkiaLayer.awt.kt:565)
+	at org.jetbrains.skiko.redrawer.AWTRedrawer.update(AWTRedrawer.kt:54)
+	at org.jetbrains.skiko.redrawer.LinuxOpenGLRedrawer$Companion$frameDispatcher$1.invokeSuspend(LinuxOpenGLRedrawer.kt:122)
+	at org.jetbrains.skiko.redrawer.LinuxOpenGLRedrawer$Companion$frameDispatcher$1.invoke(LinuxOpenGLRedrawer.kt)
+	at org.jetbrains.skiko.redrawer.LinuxOpenGLRedrawer$Companion$frameDispatcher$1.invoke(LinuxOpenGLRedrawer.kt)
+	at org.jetbrains.skiko.FrameDispatcher$job$1.invokeSuspend(FrameDispatcher.kt:33)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+	Suppressed: kotlinx.coroutines.internal.DiagnosticCoroutineContextException: [androidx.compose.ui.scene.ComposeContainer$DesktopCoroutineExceptionHandler@48d916c0, androidx.compose.runtime.BroadcastFrameClock@2f17157a, StandaloneCoroutine{Cancelling}@a46b8bb, FlushCoroutineDispatcher@4cd2f1b8]
+
+BUILD SUCCESSFUL in 16s
+125 actionable tasks: 16 executed, 109 up-to-date
+Configuration cache entry reused.

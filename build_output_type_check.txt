@@ -1,0 +1,446 @@
+Calculating task graph as no cached configuration is available for tasks: :composeApp:compileKotlinJvm
+Type-safe project accessors is an incubating feature.
+
+> Configure project :composeApp
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.application'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.application' starting with Android Gradle Plugin 9.0.0.
+
+Please change the structure of the your project and move the usage of 'com.android.application' into a separate subproject. The new subproject should add a dependency on this KMP subproject.
+
+Read more: https://kotl.in/kmp-project-structure-migration
+[32m[1mSolution:[0m[0m
+[32m[3mPlease change the structure of your project and move the usage of 'com.android.application' into a separate subproject.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :core-database
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :core-network
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :common:data
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :common:domain
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :common:ui
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :favorite:data
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :favorite:domain
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :favorite:ui
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :game:data
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :game:domain
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :game:ui
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :search:data
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :search:domain
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Configure project :search:ui
+w: [33m[1m⚠️ The 'org.jetbrains.kotlin.multiplatform' plugin deprecated compatibility with Android Gradle plugin: 'com.android.library'[0m[0m
+The 'org.jetbrains.kotlin.multiplatform' plugin will not be compatible with 'com.android.library' starting with Android Gradle Plugin 9.0.0.
+[32m[1mSolution:[0m[0m
+[32m[3mPlease use the 'com.android.kotlin.multiplatform.library' plugin instead of 'com.android.library'.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-new-kmp[0m[36m for more details.[0m
+
+
+> Task :composeApp:generateComposeResClass UP-TO-DATE
+> Task :composeApp:kmpPartiallyResolvedDependenciesChecker
+> Task :composeApp:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :composeApp:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :composeApp:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :composeApp:copyNonXmlValueResourcesForCommonMain UP-TO-DATE
+> Task :composeApp:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-database:kmpPartiallyResolvedDependenciesChecker
+> Task :composeApp:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core-database:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core-database:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :composeApp:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :core-database:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :composeApp:prepareComposeResourcesTaskForCommonMain UP-TO-DATE
+> Task :core-database:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :composeApp:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :core-database:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :composeApp:generateResourceAccessorsForCommonMain UP-TO-DATE
+> Task :core-database:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-database:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :composeApp:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :core-database:generateCommonMainAppDatabaseInterface UP-TO-DATE
+> Task :core-database:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :core-database:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :core-database:generateComposeResClass UP-TO-DATE
+> Task :core-network:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core-database:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :core-database:assembleJvmMainResources UP-TO-DATE
+> Task :core-network:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core-database:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :core-network:kmpPartiallyResolvedDependenciesChecker
+> Task :core-network:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core-database:jvmProcessResources UP-TO-DATE
+> Task :core-database:processJvmMainResources SKIPPED
+> Task :core-network:generateComposeResClass UP-TO-DATE
+> Task :core-network:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :core-network:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-network:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :core-network:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-network:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :common:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :common:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :common:domain:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core-network:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :core-network:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :common:domain:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core-network:assembleJvmMainResources UP-TO-DATE
+> Task :core-network:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :core-network:jvmProcessResources UP-TO-DATE
+> Task :common:domain:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :common:domain:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :core-network:processJvmMainResources SKIPPED
+> Task :common:domain:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :common:domain:generateComposeResClass UP-TO-DATE
+> Task :common:domain:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :common:domain:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :common:domain:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :common:domain:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :common:domain:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :common:domain:assembleJvmMainResources UP-TO-DATE
+> Task :common:domain:jvmProcessResources UP-TO-DATE
+> Task :common:domain:processJvmMainResources SKIPPED
+> Task :core-database:compileKotlinJvm UP-TO-DATE
+> Task :favorite:data:kmpPartiallyResolvedDependenciesChecker
+> Task :favorite:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core-database:compileJvmMainJava NO-SOURCE
+> Task :core-network:compileKotlinJvm UP-TO-DATE
+> Task :core-database:jvmMainClasses UP-TO-DATE
+> Task :favorite:data:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core-database:jvmJar UP-TO-DATE
+> Task :favorite:data:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:data:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-network:compileJvmMainJava NO-SOURCE
+> Task :favorite:data:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :common:domain:compileKotlinJvm UP-TO-DATE
+> Task :favorite:data:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-network:jvmMainClasses UP-TO-DATE
+> Task :favorite:data:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :favorite:data:generateComposeResClass UP-TO-DATE
+> Task :common:domain:compileJvmMainJava NO-SOURCE
+> Task :common:domain:jvmMainClasses UP-TO-DATE
+> Task :favorite:data:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :favorite:data:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :favorite:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :core-network:jvmJar UP-TO-DATE
+> Task :favorite:data:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :common:domain:jvmJar UP-TO-DATE
+> Task :favorite:domain:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :favorite:data:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :favorite:domain:generateComposeResClass UP-TO-DATE
+> Task :favorite:domain:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :favorite:domain:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:domain:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :favorite:data:assembleJvmMainResources UP-TO-DATE
+> Task :favorite:domain:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :favorite:data:jvmProcessResources UP-TO-DATE
+> Task :favorite:data:processJvmMainResources SKIPPED
+> Task :favorite:domain:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :common:ui:kmpPartiallyResolvedDependenciesChecker
+> Task :favorite:domain:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :common:ui:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :favorite:domain:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :favorite:domain:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :common:ui:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:domain:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :common:ui:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:ui:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :favorite:domain:assembleJvmMainResources UP-TO-DATE
+> Task :common:ui:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :common:ui:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :common:ui:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :favorite:domain:jvmProcessResources UP-TO-DATE
+> Task :favorite:domain:processJvmMainResources SKIPPED
+> Task :common:ui:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :common:ui:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :common:ui:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :common:ui:generateComposeResClass UP-TO-DATE
+> Task :common:ui:assembleJvmMainResources UP-TO-DATE
+> Task :favorite:ui:kmpPartiallyResolvedDependenciesChecker
+> Task :common:ui:jvmProcessResources UP-TO-DATE
+> Task :common:ui:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :favorite:ui:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :common:ui:processJvmMainResources SKIPPED
+> Task :favorite:ui:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:ui:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :favorite:ui:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:ui:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :favorite:domain:compileKotlinJvm UP-TO-DATE
+> Task :favorite:ui:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :favorite:ui:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :favorite:ui:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :favorite:domain:compileJvmMainJava NO-SOURCE
+> Task :favorite:ui:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :favorite:ui:generateComposeResClass UP-TO-DATE
+> Task :favorite:domain:jvmMainClasses UP-TO-DATE
+> Task :favorite:ui:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :favorite:ui:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :favorite:ui:assembleJvmMainResources UP-TO-DATE
+> Task :common:data:kmpPartiallyResolvedDependenciesChecker
+> Task :favorite:domain:jvmJar UP-TO-DATE
+> Task :common:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :favorite:ui:jvmProcessResources UP-TO-DATE
+> Task :common:data:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:ui:processJvmMainResources SKIPPED
+> Task :common:ui:compileKotlinJvm UP-TO-DATE
+> Task :common:ui:compileJvmMainJava NO-SOURCE
+> Task :common:data:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:data:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :common:data:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :common:ui:jvmMainClasses UP-TO-DATE
+> Task :common:data:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :common:ui:jvmJar UP-TO-DATE
+> Task :common:data:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :common:data:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :common:data:generateComposeResClass UP-TO-DATE
+> Task :common:data:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :common:data:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :common:data:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :common:data:assembleJvmMainResources UP-TO-DATE
+> Task :common:data:jvmProcessResources UP-TO-DATE
+> Task :common:data:processJvmMainResources SKIPPED
+> Task :favorite:data:compileKotlinJvm UP-TO-DATE
+> Task :game:data:kmpPartiallyResolvedDependenciesChecker
+> Task :game:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :game:data:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:data:compileJvmMainJava NO-SOURCE
+> Task :favorite:data:jvmMainClasses UP-TO-DATE
+> Task :common:data:compileKotlinJvm UP-TO-DATE
+> Task :game:data:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:data:compileJvmMainJava NO-SOURCE
+> Task :common:data:jvmMainClasses UP-TO-DATE
+> Task :favorite:data:jvmJar UP-TO-DATE
+> Task :game:data:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :favorite:ui:compileKotlinJvm UP-TO-DATE
+> Task :game:data:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :game:data:generateComposeResClass UP-TO-DATE
+> Task :common:data:jvmJar UP-TO-DATE
+> Task :favorite:ui:compileJvmMainJava NO-SOURCE
+> Task :favorite:ui:jvmMainClasses UP-TO-DATE
+> Task :game:data:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:data:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:data:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :game:data:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :game:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :game:domain:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :favorite:ui:jvmJar UP-TO-DATE
+> Task :game:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :game:data:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :game:data:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :game:domain:generateComposeResClass UP-TO-DATE
+> Task :game:domain:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:domain:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:domain:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:domain:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :game:domain:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :game:data:assembleJvmMainResources UP-TO-DATE
+> Task :game:ui:kmpPartiallyResolvedDependenciesChecker
+> Task :game:domain:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :game:domain:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :game:ui:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :game:data:jvmProcessResources UP-TO-DATE
+> Task :game:data:processJvmMainResources SKIPPED
+> Task :game:domain:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :game:ui:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:domain:assembleJvmMainResources UP-TO-DATE
+> Task :game:domain:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :game:ui:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:domain:jvmProcessResources UP-TO-DATE
+> Task :game:ui:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:domain:processJvmMainResources SKIPPED
+> Task :game:ui:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:ui:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :game:ui:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :game:ui:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :game:ui:generateComposeResClass UP-TO-DATE
+> Task :game:ui:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :search:data:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:ui:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :search:data:kmpPartiallyResolvedDependenciesChecker
+> Task :game:ui:assembleJvmMainResources UP-TO-DATE
+> Task :search:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :game:ui:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :search:data:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:ui:jvmProcessResources UP-TO-DATE
+> Task :search:data:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:ui:processJvmMainResources SKIPPED
+> Task :search:data:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :game:domain:compileKotlinJvm UP-TO-DATE
+> Task :search:data:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :search:data:generateComposeResClass UP-TO-DATE
+> Task :search:data:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :search:data:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :search:data:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :game:domain:compileJvmMainJava NO-SOURCE
+> Task :game:domain:jvmMainClasses UP-TO-DATE
+> Task :search:domain:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :search:data:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :search:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :search:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :search:domain:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :search:data:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :game:domain:jvmJar UP-TO-DATE
+> Task :search:domain:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :search:domain:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :search:domain:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :search:domain:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :search:domain:generateComposeResClass UP-TO-DATE
+> Task :search:domain:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :search:domain:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :search:domain:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :search:domain:assembleJvmMainResources UP-TO-DATE
+> Task :search:domain:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :search:domain:jvmProcessResources UP-TO-DATE
+> Task :search:domain:processJvmMainResources SKIPPED
+> Task :search:data:assembleJvmMainResources UP-TO-DATE
+> Task :game:data:compileKotlinJvm UP-TO-DATE
+> Task :search:data:jvmProcessResources UP-TO-DATE
+> Task :search:data:processJvmMainResources SKIPPED
+> Task :game:data:compileJvmMainJava NO-SOURCE
+> Task :game:data:jvmMainClasses UP-TO-DATE
+> Task :search:ui:kmpPartiallyResolvedDependenciesChecker
+> Task :game:ui:compileKotlinJvm UP-TO-DATE
+> Task :search:ui:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :game:data:jvmJar UP-TO-DATE
+> Task :search:ui:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:ui:compileJvmMainJava NO-SOURCE
+> Task :game:ui:jvmMainClasses UP-TO-DATE
+> Task :search:ui:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :search:domain:compileKotlinJvm UP-TO-DATE
+> Task :search:ui:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :search:ui:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :game:ui:jvmJar UP-TO-DATE
+> Task :search:ui:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :search:domain:compileJvmMainJava NO-SOURCE
+> Task :search:domain:jvmMainClasses UP-TO-DATE
+> Task :search:ui:generateComposeResClass UP-TO-DATE
+> Task :search:ui:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :search:ui:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :search:ui:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :search:ui:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :search:ui:assembleJvmMainResources UP-TO-DATE
+> Task :search:domain:jvmJar UP-TO-DATE
+> Task :search:ui:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :search:ui:jvmProcessResources UP-TO-DATE
+> Task :search:ui:processJvmMainResources SKIPPED
+> Task :search:data:compileKotlinJvm UP-TO-DATE
+> Task :search:data:compileJvmMainJava NO-SOURCE
+> Task :search:ui:compileKotlinJvm UP-TO-DATE
+> Task :search:data:jvmMainClasses UP-TO-DATE
+> Task :search:ui:compileJvmMainJava NO-SOURCE
+> Task :search:ui:jvmMainClasses UP-TO-DATE
+> Task :search:ui:jvmJar UP-TO-DATE
+> Task :search:data:jvmJar UP-TO-DATE
+
+> Task :composeApp:compileKotlinJvm FAILED
+e: file:///home/lidigu/Documents/GameApp/composeApp/src/commonMain/kotlin/com/lidigu/gameapp/navigation/GameNavGraph.kt:10:29 Unresolved reference 'getString'.
+e: file:///home/lidigu/Documents/GameApp/composeApp/src/commonMain/kotlin/com/lidigu/gameapp/navigation/GameNavGraph.kt:61:30 Initializer type mismatch: expected 'Int', actual 'SavedState?'.
+e: file:///home/lidigu/Documents/GameApp/composeApp/src/commonMain/kotlin/com/lidigu/gameapp/navigation/GameNavGraph.kt:63:23 Unresolved reference 'getString'.
+e: file:///home/lidigu/Documents/GameApp/composeApp/src/commonMain/kotlin/com/lidigu/gameapp/navigation/GameNavGraph.kt:67:23 Unresolved reference 'getString'.
+
+[Incubating] Problems report is available at: file:///home/lidigu/Documents/GameApp/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':composeApp:compileKotlinJvm'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 48s
+121 actionable tasks: 16 executed, 105 up-to-date
+Configuration cache entry stored.

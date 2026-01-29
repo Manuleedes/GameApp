@@ -104,13 +104,13 @@ fun GameDetailsScreenContent(
                 }
                 item {
                     Text( modifier = Modifier.padding(horizontal = 12.dp, vertical = 12.dp).fillMaxWidth(),
-                        text = data.name,
+                        text = data.name ?: "",
                         style = MaterialTheme.typography.displaySmall
 
                     )
                 }
                 item {
-                    Text(text = data.description, style = MaterialTheme.typography.bodySmall,
+                    Text(text = data.description ?: "", style = MaterialTheme.typography.bodySmall,
                         modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp).fillMaxWidth())
                 }
                 item {
@@ -134,7 +134,7 @@ fun GameDetailsScreenContent(
                                         )
                                         Text(
                                             modifier = Modifier.padding(vertical = 8.dp),
-                                            text = it.name,
+                                            text = it.name ?: "",
                                             style = MaterialTheme.typography.headlineSmall
                                         )
                                     }
@@ -175,17 +175,17 @@ fun GameDetailsScreenContent(
 
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
-                                text = it.name, style = MaterialTheme.typography.headlineMedium,
+                                text = it.name ?: "", style = MaterialTheme.typography.headlineMedium,
                                 modifier = Modifier.padding(end = 8.dp)
                             )
                             Spacer(Modifier.height(8.dp))
                             Text(
-                                text = it.domain, style = MaterialTheme.typography.bodySmall,
+                                text = it.domain ?: "", style = MaterialTheme.typography.bodySmall,
                                 textDecoration = TextDecoration.Underline
                             )
                             Spacer(Modifier.height(8.dp))
                             Text(
-                                text = "Gamecount: " + it.gameCount,
+                                text = "Game count: " + it.gameCount,
                                 style = MaterialTheme.typography.headlineSmall
                             )
 
@@ -230,7 +230,7 @@ fun GameDetailsScreenContent(
                                 )
                                 Spacer(Modifier.width(4.dp))
                                 Text(
-                                    text = it.name, style = MaterialTheme.typography.headlineSmall,
+                                    text = it.name ?: "", style = MaterialTheme.typography.headlineSmall,
                                     modifier = Modifier.padding(end = 8.dp)
                                 )
                             }
@@ -269,12 +269,12 @@ fun GameDetailsScreenContent(
 
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
-                                text = it.name, style = MaterialTheme.typography.bodyMedium,
+                                text = it.name ?: "", style = MaterialTheme.typography.bodyMedium,
                                 modifier = Modifier.padding(end = 8.dp)
                             )
                             Spacer(Modifier.height(8.dp))
                             Text(
-                                text = "Gamecount: " + it.gameCount,
+                                text = "Game count: " + it.gameCount,
                                 style = MaterialTheme.typography.headlineSmall
                             )
                         }
@@ -306,7 +306,7 @@ fun GameDetailsScreenContent(
 
                 IconButton(
                     onClick = {
-                        onSave(data.id, data.name, data.backgroundImage)
+                        onSave(data.id, data.name ?: "", data.backgroundImage ?: "")
                     },
                     modifier = Modifier.background(color = Color.White, shape = CircleShape)
                 ) {

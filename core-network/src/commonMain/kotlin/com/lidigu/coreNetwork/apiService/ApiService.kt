@@ -37,6 +37,7 @@ class ApiService(
             Result.failure(e)
         }
     }
+
 //    //https://api.rawg.io/api/games/4200?key=a558f7f840db4f79a9ccc0700d88f3bd
     suspend fun getDetails(id:Int): Result<GameDetailsResponse>{
       return  try {

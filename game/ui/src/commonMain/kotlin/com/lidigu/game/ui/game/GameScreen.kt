@@ -42,7 +42,6 @@ fun GameScreen(
     onClick: (Int) -> Unit
 
 ) {
-
     val viewModel = koinViewModel<GameViewModel>()
 
     val uiState = viewModel.uiState.collectAsStateWithLifecycle()
@@ -64,76 +63,97 @@ fun GameScreenContent(
     onSearchClick:()->Unit,
     onClick:(Int)-> Unit
 ) {
-
     Scaffold(
         modifier = modifier.fillMaxSize(),
         topBar = {
             TopAppBar(
-                title = { Text("Game App") },
+                title = { Text("Game App:") },
                 actions = {
                     IconButton(onClick = onSearchClick) {
-                        Icon(imageVector = Icons.Default.Search, contentDescription = null)
+                        Icon(Icons.Default.Search, contentDescription = null)
                     }
-
                     IconButton(onClick = onFavoriteClick) {
-                        Icon(imageVector = Icons.Default.Favorite, contentDescription = null)
+                        Icon(Icons.Default.Favorite, contentDescription = null)
                     }
                 },
-              //  backgroundColor = Color.White
-                        colors = TopAppBarDefaults.topAppBarColors(
-                        containerColor = Color.White
-                        )
-
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = Color.White
+                )
             )
-        }) {
-
-        if (uiState.isLoading) {
-            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                CircularProgressIndicator()
-            }
         }
+    ) { innerPadding ->
 
-
-        if (uiState.error.isNotBlank()) {
-            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                Text(uiState.error)
+        when {
+            uiState.isLoading -> {
+                Box(
+                    Modifier
+                        .fillMaxSize()
+                        .padding(innerPadding),
+                    contentAlignment = Alignment.Center
+                ) {
+                    CircularProgressIndicator()
+                }
             }
-        }
 
-        uiState.data?.let { data ->
-            LazyColumn(modifier = modifier.fillMaxSize()) {
-                items(data) {
-                    Card(
-                        modifier = Modifier.padding(12.dp).fillMaxWidth().height(350.dp)
-                            .clickable { onClick(it.id) },
-                        shape = RoundedCornerShape(12.dp)
+            uiState.error.isNotBlank() -> {
+                Box(
+                    Modifier
+                        .fillMaxSize()
+                        .padding(innerPadding),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(uiState.error)
+                }
+            }
+
+            else -> {
+                uiState.data?.let { data ->
+                    LazyColumn(
+                        modifier = Modifier.fillMaxSize(),
+                        contentPadding = innerPadding
                     ) {
-                        Box(Modifier.fillMaxSize()) {
-                            AsyncImage(
-                                model = it.imageBackground, contentDescription = null,
-                                modifier = Modifier.fillMaxWidth().height(350.dp),
-                                contentScale = ContentScale.Crop
-                            )
-
-                            Box(
-                                modifier = Modifier.padding(horizontal = 12.dp, vertical = 12.dp)
-                                    .background(
-                                        color = Color.White,
-                                        shape = RoundedCornerShape(12.dp)
-                                    ).fillMaxWidth().align(Alignment.BottomCenter),
+                        items(data) { item ->
+                            Card(
+                                modifier = Modifier
+                                    .padding(12.dp)
+                                    .fillMaxWidth()
+                                    .height(350.dp)
+                                    .clickable { onClick(item.id) },
+                                shape = RoundedCornerShape(12.dp)
                             ) {
-                                Text(
-                                    it.name, style = MaterialTheme.typography.bodySmall,
-                                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
-                                    maxLines = 1,
-                                    overflow = TextOverflow.Ellipsis
-                                )
+                                Box(Modifier.fillMaxSize()) {
+                                    AsyncImage(
+                                        model = item.imageBackground,
+                                        contentDescription = null,
+                                        modifier = Modifier.fillMaxSize(),
+                                        contentScale = ContentScale.Crop
+                                    )
+
+                                    Box(
+                                        modifier = Modifier
+                                            .padding(12.dp)
+                                            .background(
+                                                Color.White,
+                                                RoundedCornerShape(12.dp)
+                                            )
+                                            .fillMaxWidth()
+                                            .align(Alignment.BottomCenter)
+                                    ) {
+                                        Text(
+                                            item.name ?: "Unknown",
+                                            style = MaterialTheme.typography.bodySmall,
+                                            modifier = Modifier.padding(8.dp),
+                                            maxLines = 1,
+                                            overflow = TextOverflow.Ellipsis
+                                        )
+                                    }
+                                }
                             }
                         }
-
                     }
                 }
             }
         }
     }
 }
+
