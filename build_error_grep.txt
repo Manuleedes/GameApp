@@ -1,0 +1,145 @@
+Reusing configuration cache.
+> Task :core-database:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-database:kmpPartiallyResolvedDependenciesChecker
+> Task :core-database:generateCommonMainAppDatabaseInterface UP-TO-DATE
+> Task :core-database:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core-database:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-database:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core-database:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core-database:generateComposeResClass UP-TO-DATE
+> Task :core-database:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :core-database:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :core-database:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :core-network:kmpPartiallyResolvedDependenciesChecker
+> Task :core-network:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core-database:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :core-network:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-database:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :core-database:assembleJvmMainResources UP-TO-DATE
+> Task :core-network:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core-network:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-database:jvmProcessResources UP-TO-DATE
+> Task :core-database:processJvmMainResources SKIPPED
+> Task :core-network:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core-database:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :core-network:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :core-network:generateComposeResClass UP-TO-DATE
+> Task :core-network:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :core-network:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :core-network:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :core-network:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :core-network:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :core-network:assembleJvmMainResources UP-TO-DATE
+> Task :common:data:kmpPartiallyResolvedDependenciesChecker
+> Task :common:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core-network:jvmProcessResources UP-TO-DATE
+> Task :core-network:processJvmMainResources SKIPPED
+> Task :common:data:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:data:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-database:compileKotlinJvm UP-TO-DATE
+> Task :common:data:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-database:compileJvmMainJava NO-SOURCE
+> Task :common:data:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core-database:jvmMainClasses UP-TO-DATE
+> Task :core-database:jvmJar UP-TO-DATE
+> Task :common:data:generateComposeResClass UP-TO-DATE
+> Task :common:data:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :common:data:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :common:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :common:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :common:data:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :common:data:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :common:data:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :common:domain:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:data:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :core-network:compileKotlinJvm UP-TO-DATE
+> Task :common:domain:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:domain:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-network:compileJvmMainJava NO-SOURCE
+> Task :common:domain:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :core-network:jvmMainClasses UP-TO-DATE
+> Task :core-network:jvmJar UP-TO-DATE
+> Task :common:domain:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :common:domain:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :common:domain:generateComposeResClass UP-TO-DATE
+> Task :common:domain:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :game:data:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:domain:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :common:data:assembleJvmMainResources UP-TO-DATE
+> Task :game:data:kmpPartiallyResolvedDependenciesChecker
+> Task :game:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :game:data:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :common:domain:assembleJvmMainResources UP-TO-DATE
+> Task :common:domain:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :common:domain:jvmProcessResources UP-TO-DATE
+> Task :common:domain:processJvmMainResources SKIPPED
+> Task :common:data:jvmProcessResources UP-TO-DATE
+> Task :common:data:processJvmMainResources SKIPPED
+> Task :game:data:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :common:domain:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :game:data:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:data:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :game:data:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:data:generateComposeResClass UP-TO-DATE
+> Task :game:data:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :game:data:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :game:domain:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:data:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :game:domain:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :game:domain:kmpPartiallyResolvedDependenciesChecker
+> Task :game:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :game:domain:convertXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:data:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :game:domain:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :game:domain:generateResourceAccessorsForCommonMain NO-SOURCE
+> Task :game:domain:generateComposeResClass UP-TO-DATE
+> Task :game:domain:generateExpectResourceCollectorsForCommonMain UP-TO-DATE
+> Task :game:domain:copyNonXmlValueResourcesForJvmMain NO-SOURCE
+> Task :game:domain:prepareComposeResourcesTaskForJvmMain NO-SOURCE
+> Task :game:domain:assembleJvmMainResources UP-TO-DATE
+> Task :game:domain:generateResourceAccessorsForJvmMain NO-SOURCE
+> Task :game:domain:jvmProcessResources UP-TO-DATE
+> Task :game:domain:generateActualResourceCollectorsForJvmMain UP-TO-DATE
+> Task :game:domain:processJvmMainResources SKIPPED
+> Task :common:domain:compileKotlinJvm UP-TO-DATE
+> Task :common:domain:compileJvmMainJava NO-SOURCE
+> Task :common:domain:jvmMainClasses UP-TO-DATE
+> Task :common:domain:jvmJar UP-TO-DATE
+> Task :common:data:compileKotlinJvm UP-TO-DATE
+> Task :game:domain:compileKotlinJvm UP-TO-DATE
+> Task :common:data:compileJvmMainJava NO-SOURCE
+> Task :common:data:jvmMainClasses UP-TO-DATE
+> Task :game:domain:compileJvmMainJava NO-SOURCE
+> Task :game:domain:jvmMainClasses UP-TO-DATE
+> Task :common:data:jvmJar UP-TO-DATE
+> Task :game:domain:jvmJar UP-TO-DATE
+
+> Task :game:data:compileKotlinJvm FAILED
+e: file:///home/lidigu/Documents/GameApp/game/data/src/commonMain/kotlin/com/lidigu/game/data/di/GameDataModule.kt:14:45 Cannot infer type for type parameter 'T'. Specify it explicitly.
+e: file:///home/lidigu/Documents/GameApp/game/data/src/commonMain/kotlin/com/lidigu/game/data/repository/DownloadRepositoryImpl.kt:6:8 Unresolved reference 'io'.
+e: file:///home/lidigu/Documents/GameApp/game/data/src/commonMain/kotlin/com/lidigu/game/data/repository/DownloadRepositoryImpl.kt:7:8 Unresolved reference 'io'.
+e: file:///home/lidigu/Documents/GameApp/game/data/src/commonMain/kotlin/com/lidigu/game/data/repository/DownloadRepositoryImpl.kt:8:8 Unresolved reference 'io'.
+e: file:///home/lidigu/Documents/GameApp/game/data/src/commonMain/kotlin/com/lidigu/game/data/repository/DownloadRepositoryImpl.kt:9:8 Unresolved reference 'io'.
+e: file:///home/lidigu/Documents/GameApp/game/data/src/commonMain/kotlin/com/lidigu/game/data/repository/DownloadRepositoryImpl.kt:10:8 Unresolved reference 'io'.
+e: file:///home/lidigu/Documents/GameApp/game/data/src/commonMain/kotlin/com/lidigu/game/data/repository/DownloadRepositoryImpl.kt:22:29 Unresolved reference 'HttpClient'.
+e: file:///home/lidigu/Documents/GameApp/game/data/src/commonMain/kotlin/com/lidigu/game/data/repository/DownloadRepositoryImpl.kt:53:29 Unresolved reference 'SYSTEM'.
+e: file:///home/lidigu/Documents/GameApp/game/data/src/commonMain/kotlin/com/lidigu/game/data/repository/DownloadRepositoryImpl.kt:54:28 Unresolved reference 'SYSTEM'.
+e: file:///home/lidigu/Documents/GameApp/game/data/src/commonMain/kotlin/com/lidigu/game/data/repository/DownloadRepositoryImpl.kt:61:39 Unresolved reference 'SYSTEM'.
+e: file:///home/lidigu/Documents/GameApp/game/data/src/commonMain/kotlin/com/lidigu/game/data/repository/DownloadRepositoryImpl.kt:68:26 Unresolved reference 'close'.
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':game:data:compileKotlinJvm'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 3s
+46 actionable tasks: 7 executed, 39 up-to-date
+Configuration cache entry reused.

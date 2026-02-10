@@ -2,6 +2,7 @@ package com.lidigu.game.ui.gameDetails
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -24,6 +25,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.Download
+import androidx.compose.material.icons.filled.DownloadDone
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.filled.StarBorder
+import androidx.compose.material.icons.filled.Send
+import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -31,7 +39,13 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
+import androidx.compose.material3.Button
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -41,6 +55,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.compose.ui.platform.LocalUriHandler
 import coil3.compose.AsyncImage
 import org.koin.compose.viewmodel.koinViewModel
 
@@ -52,6 +67,9 @@ fun GameDetailsScreen(modifier: Modifier = Modifier,
 
     val viewModel = koinViewModel<GameDetailsViewModel>()
     val uiState = viewModel.uiState.collectAsStateWithLifecycle()
+    val uriHandler = LocalUriHandler.current
+
+    var isPlaying by remember { mutableStateOf(false) }
 
     LaunchedEffect(id) {
         viewModel.getGameDetails(id.toInt())
@@ -63,13 +81,34 @@ fun GameDetailsScreen(modifier: Modifier = Modifier,
             viewModel.consumeDeleteEvent()
         }
     }
-    GameDetailsScreenContent(
-        modifier = modifier.fillMaxSize(), uiState = uiState.value,
-        onDelete = { viewModel.delete(it) },
-        onSave = { id, name, image -> viewModel.toggleFavorite(id, image, name) },
-        isSaved = uiState.value.isSaved,
-        onBackClick = onBackClick
-    )
+    Box(modifier = Modifier.fillMaxSize()) {
+        GameDetailsScreenContent(
+            modifier = modifier.fillMaxSize(), uiState = uiState.value,
+            onDelete = { viewModel.delete(it) },
+            onSave = { id, name, image -> viewModel.toggleFavorite(id, image, name) },
+            onDownload = { id, name, image ->
+                val gameUrl = uiState.value.data?.stores?.firstOrNull { it.url?.isNotBlank() == true }?.url
+                    ?: uiState.value.data?.website ?: ""
+                viewModel.toggleDownload(id, image, name, gameUrl)
+            },
+            onSaveReview = { id, name, image, rating, review -> viewModel.saveReview(id, image, name, rating, review) },
+            onPlay = { isPlaying = true },
+            isSaved = uiState.value.isSaved,
+            onBackClick = onBackClick
+        )
+
+        if (isPlaying) {
+            Box(modifier = Modifier.fillMaxSize().background(Color.Black).clickable { isPlaying = false }, contentAlignment = Alignment.Center) {
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text("Playing ${uiState.value.data?.name ?: "Game"} (Offline Mode)...", color = Color.White, style = MaterialTheme.typography.headlineLarge)
+                    Spacer(Modifier.height(20.dp))
+                    IconButton(onClick = { isPlaying = false }, modifier = Modifier.background(Color.White, CircleShape)) {
+                        Icon(Icons.Default.Close, contentDescription = "Close", tint = Color.Black)
+                    }
+                }
+            }
+        }
+    }
 
 }
 
@@ -79,6 +118,9 @@ fun GameDetailsScreenContent(
     modifier: Modifier = Modifier, uiState: GameDetailsScreen.UiState,
     onDelete: (Int) -> Unit,
     onSave: (id: Int, title: String, image: String) -> Unit,
+    onDownload: (id: Int, title: String, image: String) -> Unit,
+    onSaveReview: (id: Int, title: String, image: String, rating: Int, review: String) -> Unit,
+    onPlay: () -> Unit,
     onBackClick: () -> Unit,
     isSaved: Boolean
 ) {
@@ -155,14 +197,18 @@ fun GameDetailsScreenContent(
                     )
                 }
 
-                items(data.stores) {
+                items(data.stores) { store ->
+                    val uriHandler = LocalUriHandler.current
                     Row(
                         modifier = Modifier.padding(horizontal = 12.dp)
                             .padding(bottom = 8.dp).fillMaxWidth()
+                            .clickable {
+                                store.url?.let { if (it.isNotBlank()) uriHandler.openUri(it) }
+                            }
                     ) {
 
                         AsyncImage(
-                            model = it.image, contentDescription = null,
+                            model = store.image, contentDescription = null,
                             modifier = Modifier.size(120.dp)
                                 .background(
                                     color = Color.Transparent,
@@ -175,17 +221,17 @@ fun GameDetailsScreenContent(
 
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
-                                text = it.name ?: "", style = MaterialTheme.typography.headlineMedium,
+                                text = store.name ?: "", style = MaterialTheme.typography.headlineMedium,
                                 modifier = Modifier.padding(end = 8.dp)
                             )
                             Spacer(Modifier.height(8.dp))
                             Text(
-                                text = it.domain ?: "", style = MaterialTheme.typography.bodySmall,
+                                text = store.domain ?: "", style = MaterialTheme.typography.bodySmall,
                                 textDecoration = TextDecoration.Underline
                             )
                             Spacer(Modifier.height(8.dp))
                             Text(
-                                text = "Game count: " + it.gameCount,
+                                text = "Game count: " + store.gameCount,
                                 style = MaterialTheme.typography.headlineSmall
                             )
 
@@ -283,6 +329,53 @@ fun GameDetailsScreenContent(
                 }
 
 
+                item {
+                    Text(
+                        text = "Review & Rating", style = MaterialTheme.typography.headlineLarge,
+                        modifier = Modifier.padding(horizontal = 12.dp).padding(top = 24.dp)
+                    )
+                }
+
+                item {
+                    var rating by remember { mutableStateOf(uiState.rating ?: 0) }
+                    var reviewText by remember { mutableStateOf(uiState.review ?: "") }
+
+                    Column(modifier = Modifier.padding(12.dp).fillMaxWidth()) {
+                        Row {
+                            (1..5).forEach { index ->
+                                IconButton(onClick = { rating = index }) {
+                                    Icon(
+                                        imageVector = if (index <= rating) Icons.Default.Star else Icons.Default.StarBorder,
+                                        contentDescription = null,
+                                        tint = if (index <= rating) Color(0xFFFFD700) else Color.Gray
+                                    )
+                                }
+                            }
+                        }
+
+                        TextField(
+                            value = reviewText,
+                            onValueChange = { reviewText = it },
+                            modifier = Modifier.fillMaxWidth().height(120.dp),
+                            placeholder = { Text("Write your review here...") }
+                        )
+
+                        Spacer(modifier = Modifier.height(12.dp))
+
+                        Button(
+                            onClick = {
+                                onSaveReview(data.id, data.name ?: "", data.backgroundImage ?: "", rating, reviewText)
+                            },
+                            modifier = Modifier.align(Alignment.End)
+                        ) {
+                            Icon(Icons.Default.Send, contentDescription = null)
+                            Spacer(Modifier.width(8.dp))
+                            Text("Submit Review")
+                        }
+                    }
+                }
+
+
             }
 
             Row(
@@ -316,6 +409,62 @@ fun GameDetailsScreenContent(
                         modifier = Modifier.padding(4.dp),
                         tint = if (isSaved) Color.Red else Color.Gray
                     )
+                }
+
+                Spacer(modifier = Modifier.width(12.dp))
+
+                IconButton(
+                    onClick = {
+                        onDownload(data.id, data.name ?: "", data.backgroundImage ?: "")
+                    },
+                    modifier = Modifier.background(color = Color.White, shape = CircleShape),
+                    enabled = !uiState.isDownloading
+                ) {
+                    Icon(
+                        imageVector = if (uiState.isDownloaded) Icons.Default.DownloadDone else Icons.Default.Download,
+                        contentDescription = null,
+                        modifier = Modifier.padding(4.dp),
+                        tint = when {
+                            uiState.isDownloading -> Color.Blue
+                            uiState.isDownloaded -> Color.Green
+                            else -> Color.Gray
+                        }
+                    )
+                }
+                
+                // Show download progress
+                if (uiState.isDownloading && uiState.downloadProgress != null) {
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Box(
+                        modifier = Modifier.size(40.dp).background(color = Color.White, shape = CircleShape),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        CircularProgressIndicator(
+                            progress = { uiState.downloadProgress.progress },
+                            modifier = Modifier.size(30.dp),
+                            color = Color.Blue,
+                        )
+                        Text(
+                            text = "${(uiState.downloadProgress.progress * 100).toInt()}%",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = Color.Blue
+                        )
+                    }
+                }
+
+                if (uiState.isDownloaded) {
+                    Spacer(modifier = Modifier.width(12.dp))
+
+                    IconButton(
+                        onClick = onPlay,
+                        modifier = Modifier.background(color = Color(0xFF4CAF50), shape = CircleShape)
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.PlayArrow, contentDescription = "Play",
+                            modifier = Modifier.padding(4.dp),
+                            tint = Color.White
+                        )
+                    }
                 }
 
                 Spacer(modifier = Modifier.width(12.dp))

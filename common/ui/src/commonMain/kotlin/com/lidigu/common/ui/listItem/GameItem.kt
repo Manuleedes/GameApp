@@ -11,6 +11,12 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -31,7 +37,8 @@ fun GameItem(modifier: Modifier,
              isDeleteShown: Boolean = false,
              item: Game,
              onClick:(Int) -> Unit,
-             onDeleteClick:(Int) -> Unit
+             onDeleteClick:(Int) -> Unit,
+             onPlayClick: (Int) -> Unit = {}
              ){
     Card(
         modifier = Modifier.padding(12.dp).fillMaxWidth().height(350.dp)
@@ -52,12 +59,20 @@ fun GameItem(modifier: Modifier,
                         shape = RoundedCornerShape(12.dp)
                     ).fillMaxWidth().align(Alignment.BottomCenter),
             ) {
-                Text(
-                    item.name ?: "Unknown", style = MaterialTheme.typography.bodySmall,
-                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
-                )
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        item.name ?: "Unknown", style = MaterialTheme.typography.bodySmall,
+                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp).weight(1f),
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                    if (item.rating != null) {
+                        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(end = 8.dp)) {
+                            Icon(Icons.Default.Star, contentDescription = null, tint = Color(0xFFFFD700), modifier = Modifier.size(16.dp))
+                            Text(item.rating.toString(), style = MaterialTheme.typography.labelSmall)
+                        }
+                    }
+                }
             }
             if (isDeleteShown) {
                 IconButton(
@@ -69,6 +84,20 @@ fun GameItem(modifier: Modifier,
                     Icon(
                         imageVector = Icons.Default.Delete, contentDescription = null,
                         modifier = Modifier.padding(4.dp)
+                    )
+                }
+            }
+            if (item.isDownloaded) {
+                IconButton(
+                    onClick = { onPlayClick(item.id) },
+                    modifier = Modifier.padding(12.dp)
+                        .background(color = Color.White, shape = CircleShape)
+                        .align(Alignment.TopStart)
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.PlayArrow, contentDescription = "Play",
+                        modifier = Modifier.padding(4.dp),
+                        tint = Color(0xFF4CAF50)
                     )
                 }
             }

@@ -10,51 +10,53 @@ import com.lidigu.game.domain.model.Tag
 
 fun GameDetailsResponse.toDomainGameDetails(): GameDetails {
     return GameDetails(
-        id = id ?: 0,
-        name = name ?: "Unknown Game",
-        description = description_raw ?: "",
+        id = this.id ?: 0,
+        name = this.title ?: "Unknown Game",
+        description = this.description ?: this.short_description ?: "",
 
-        backgroundImage = background_image ?: "",
-        additionalImage = background_image_additional ?: "",
+        backgroundImage = this.thumbnail ?: "",
+        additionalImage = this.screenshots?.firstOrNull()?.image ?: "",
 
-        platforms = platforms.orEmpty().mapNotNull { platformItem ->
-            platformItem.platform?.let { platform ->
+        platforms = listOfNotNull(
+            this.platform?.let {
                 Platform(
-                    name = platform.name ?: "Unknown",
-                    image = platform.image_background ?: ""
+                    name = it,
+                    image = ""
                 )
             }
-        },
+        ),
 
-        stores = stores.orEmpty().mapNotNull { storeItem ->
-            storeItem.store?.let { store ->
+        stores = listOfNotNull(
+            this.game_url?.let {
                 Store(
-                    name = store.name ?: "Unknown Store",
-                    image = store.image_background ?: "",
-                    gameCount = store.games_count ?: 0,
-                    domain = store.domain ?: ""
+                    name = "FreeToGame",
+                    image = "",
+                    gameCount = 1,
+                    domain = "freetogame.com",
+                    url = it
                 )
             }
-        },
+        ),
 
-        developers = developers.orEmpty().mapNotNull { developer ->
-            developer?.let {
+        developers = listOfNotNull(
+            this.developer?.let {
                 Developer(
-                    name = it.name ?: "Unknown Developer",
-                    image = it.image_background ?: "",
-                    gameCount = it.games_count ?: 0
+                    name = it,
+                    image = "",
+                    gameCount = 1
                 )
             }
-        },
+        ),
 
-        tags = tags.orEmpty().mapNotNull { tag ->
-            tag?.let {
+        tags = listOfNotNull(
+            this.genre?.let {
                 Tag(
-                    name = it.name ?: "Unknown",
-                    image = it.image_background ?: ""
+                    name = it,
+                    image = ""
                 )
             }
-        }
+        ),
+        website = this.freetogame_profile_url
     )
 }
 

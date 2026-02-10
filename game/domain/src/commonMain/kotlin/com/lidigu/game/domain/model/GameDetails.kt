@@ -9,7 +9,8 @@ data class GameDetails (
     val platforms: List<Platform>,
     val stores: List<Store>,
     val developers: List<Developer>,
-    val tags: List<Tag>
+    val tags: List<Tag>,
+    val website: String?
 )
 
 data class Platform(
@@ -21,7 +22,8 @@ data class Store(
     val name: String?,
     val image: String?,
     val gameCount: Int?,
-    val domain: String?
+    val domain: String?,
+    val url: String?
 )
 
 data class Developer(

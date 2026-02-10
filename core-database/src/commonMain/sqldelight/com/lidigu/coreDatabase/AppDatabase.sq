@@ -1,15 +1,34 @@
 CREATE TABLE game (
   id INTEGER NOT NULL PRIMARY KEY,
   image TEXT NOT NULL,
-  name TEXT NOT NULL
+  name TEXT NOT NULL,
+  isFavorite INTEGER NOT NULL DEFAULT 0,
+  isDownloaded INTEGER NOT NULL DEFAULT 0,
+  rating INTEGER,
+  review TEXT
 );
 
-upsert:
-INSERT OR REPLACE INTO game(id, image, name)
-VALUES (?, ?, ?);
+insertGame:
+INSERT OR IGNORE INTO game(id, image, name, isFavorite, isDownloaded, rating, review)
+VALUES (?, ?, ?, ?, ?, ?, ?);
+
+updateFavorite:
+UPDATE game SET isFavorite = ? WHERE id = ?;
+
+updateGameDetails:
+UPDATE game SET image = ?, name = ? WHERE id = ?;
+
+getGameById:
+SELECT * FROM game WHERE id = ?;
 
 getAllGames:
 SELECT * FROM game;
+
+updateDownloaded:
+UPDATE game SET isDownloaded = ? WHERE id = ?;
+
+updateReview:
+UPDATE game SET rating = ?, review = ? WHERE id = ?;
 
 delete:
 DELETE FROM game WHERE id = ?;

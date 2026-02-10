@@ -10,9 +10,13 @@ import org.koin.dsl.module
 fun getGameUiModule() = module {
     viewModel { GameViewModel(getGamesUseCase = get<GetGamesUseCase>()) }
     viewModel { GameDetailsViewModel(
-        getGameDetailsUseCase = get<GetGameDetailsUseCase>(),
+        getGameDetailsUseCase = get(),
         saveGameUseCase = get(),
-        deleteUseCase = get()
+        deleteUseCase = get(),
+        downloadGameUseCase = get(),
+        reviewGameUseCase = get(),
+        getLocalGameUseCase = get(),
+        updateFavoriteUseCase = get()
     ) }
 
 }

@@ -5,7 +5,8 @@ import com.lidigu.coreNetwork.client.KtorClient
 import org.koin.dsl.module
 
 fun getCoreNetworkModule() = module {
+    single { KtorClient.getInstance() }
     single {
-        ApiService(httpClient = KtorClient.getInstance())
+        ApiService(httpClient = get())
     }
 }

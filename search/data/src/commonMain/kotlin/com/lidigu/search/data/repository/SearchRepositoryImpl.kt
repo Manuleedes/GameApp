@@ -11,7 +11,7 @@ class SearchRepositoryImpl(
     override suspend fun search(q: String): Result<List<Game>> {
      return   try {
             val response = apiService.search(q)
-           val data = response.getOrThrow().results.toDomainListOfGames()
+           val data = response.getOrThrow().games.toDomainListOfGames()
             Result.success(data)
         }catch (e: Exception){
             Result.failure(e)

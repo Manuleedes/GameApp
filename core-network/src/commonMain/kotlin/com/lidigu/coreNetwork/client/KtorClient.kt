@@ -9,12 +9,22 @@ import io.ktor.client.request.accept
 import io.ktor.http.ContentType
 import io.ktor.http.URLProtocol
 import io.ktor.http.contentType
+import io.ktor.client.plugins.logging.LogLevel
+import io.ktor.client.plugins.logging.Logging
+import io.ktor.client.plugins.logging.Logger
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 
 object KtorClient {
-    //https://api.rawg.io/api/platforms?key=a558f7f840db4f79a9ccc0700d88f3bd
     fun getInstance(): HttpClient = HttpClient {
+        install(Logging) {
+            level = LogLevel.ALL
+            logger = object : Logger {
+                override fun log(message: String) {
+                    println(message)
+                }
+            }
+        }
         install(ContentNegotiation){
             json(json = Json {
                 ignoreUnknownKeys = true
@@ -22,11 +32,11 @@ object KtorClient {
         }
         install(DefaultRequest){
             url{
-                host = "api.rawg.io"
+                host = "www.freetogame.com"
                 protocol = URLProtocol.HTTPS
-                contentType(ContentType.Application.Json)
-                accept(ContentType.Application.Json)
             }
+            contentType(ContentType.Application.Json)
+            accept(ContentType.Application.Json)
         }
         install(HttpTimeout){
             socketTimeoutMillis = 30000

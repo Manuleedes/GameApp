@@ -7,5 +7,5 @@ class UpsertUseCase(
 ) {
 
    suspend operator fun invoke(id:Int, image: String, name: String) =
-        favoriteRepository.upsert(id, image = image, name = name)
+        favoriteRepository.insertGame(id, image = image, name = name, isFavorite = true)
 }

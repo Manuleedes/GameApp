@@ -59,8 +59,8 @@ object GameNavGraph : BaseNavGraph {
             composable(route = Dest.Details.route) { backStackEntry ->
 
                 val args: SavedState = backStackEntry.arguments ?: return@composable
-                val id = args.read { getString("id") }
-                val previous = args.read { if (contains("previous")) getString("previous") else "game" }
+                val id = args.read { if (contains("id")) getString("id") else "" } ?: ""
+                val previous = args.read { if (contains("previous")) getString("previous") else "game" } ?: "game"
 
                 GameDetailsScreen(
                     modifier = modifier.fillMaxSize(),

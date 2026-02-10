@@ -1,56 +1,41 @@
 package com.lidigu.coreNetwork.model.gameDetails
 
+import com.lidigu.coreNetwork.model.game.FreeToGameResult
 import kotlinx.serialization.Serializable
 
+// FreeToGame API returns the game object directly for details endpoint
+typealias GameDetailsResponse = FreeToGameDetailsWrapper
+
 @Serializable
-data class GameDetailsResponse(
-    val achievements_count: Int,
-    val added: Int,
-    val added_by_status: AddedByStatusDTO,
-    val additions_count: Int,
-    val alternative_names: List<String>,
-    val background_image: String?,
-    val background_image_additional: String?,
-    val creators_count: Int,
-    val description: String?,
-    val description_raw: String?,
-    val developers: List<DeveloperDTO> = emptyList(),
-    val dominant_color: String,
-    val esrb_rating: EsrbRatingDTO,
-    val game_series_count: Int,
-    val genres: List<GenreDTO>,
+data class FreeToGameDetailsWrapper(
     val id: Int?,
-    val movies_count: Int,
-    val name: String?,
-    val name_original: String?,
-    val parent_achievements_count: Int,
-    val parent_platforms: List<ParentPlatformDTO>,
-    val parents_count: Int,
-    val platforms: List<PlatformXDTO> = emptyList(),
-    val playtime: Int,
-    val publishers: List<PublisherDTO>,
-    val rating: Double,
-    val rating_top: Int,
-    val ratings: List<RatingDTO>,
-    val ratings_count: Int,
-    val reddit_count: Int,
-    val reddit_description: String,
-    val reddit_logo: String,
-    val reddit_name: String,
-    val reddit_url: String,
-    val released: String?,
-    val reviews_count: Int,
-    val reviews_text_count: Int,
-    val saturated_color: String,
-    val screenshots_count: Int,
-    val slug: String,
-    val stores: List<StoreDTO> = emptyList(),
-    val suggestions_count: Int,
-    val tags: List<TagDTO> = emptyList(),
-    val tba: Boolean,
-    val twitch_count: Int,
-    val updated: String,
-    val user_game: String?,
-    val website: String,
-    val youtube_count: Int
+    val title: String?,
+    val thumbnail: String?,
+    val status: String?,
+    val short_description: String?,
+    val description: String?,
+    val game_url: String?,
+    val genre: String?,
+    val platform: String?,
+    val publisher: String?,
+    val developer: String?,
+    val release_date: String?,
+    val freetogame_profile_url: String?,
+    val minimum_system_requirements: SystemRequirements? = null,
+    val screenshots: List<Screenshot>? = null
+)
+
+@Serializable
+data class SystemRequirements(
+    val os: String? = null,
+    val processor: String? = null,
+    val memory: String? = null,
+    val graphics: String? = null,
+    val storage: String? = null
+)
+
+@Serializable
+data class Screenshot(
+    val id: Int?,
+    val image: String?
 )
