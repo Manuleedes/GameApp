@@ -17,6 +17,8 @@ import kotlinx.io.buffered
 import kotlinx.io.files.Path
 import kotlinx.io.files.SystemFileSystem
 import kotlinx.io.writeString
+import kotlinx.io.readLine
+import kotlinx.datetime.Clock
 
 class DownloadRepositoryImpl(
     private val httpClient: HttpClient
@@ -63,7 +65,7 @@ class DownloadRepositoryImpl(
                 try {
                     sink.writeString("Game: $gameName\n")
                     sink.writeString("URL: $gameUrl\n")
-                    sink.writeString("Downloaded: ${kotlinx.datetime.Clock.System.now()}\n")
+                    sink.writeString("Downloaded: ${Clock.System.now()}\n")
                     sink.writeString("Offline Access: Enabled\n")
                 } finally {
                     sink.close()
@@ -121,7 +123,31 @@ class DownloadRepositoryImpl(
     override suspend fun getAllDownloads(): Flow<List<DownloadProgress>> = flow {
         emit(activeDownloads.values.map { it.value })
     }
-    
+
+    override suspend fun getDownloadedGameUrl(gameId: Int): String? = withContext(Dispatchers.Default) {
+        val downloadsDir = getDownloadsDirectory()
+        val gameInfoFile = Path("$downloadsDir/game_$gameId.txt")
+        
+        if (!SystemFileSystem.exists(gameInfoFile)) return@withContext null
+        
+        try {
+            val source = SystemFileSystem.source(gameInfoFile).buffered()
+            var gameUrl: String? = null
+            
+            while (!source.exhausted()) {
+                val line = source.readLine() ?: break
+                if (line.startsWith("URL: ")) {
+                    gameUrl = line.removePrefix("URL: ").trim()
+                    break
+                }
+            }
+            source.close()
+            gameUrl
+        } catch (e: Exception) {
+            null
+        }
+    }
+
     private fun getDownloadsDirectory(): String {
         // Platform-specific downloads directory
         return when {

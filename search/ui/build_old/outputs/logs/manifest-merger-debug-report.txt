@@ -1,0 +1,16 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/lidigu/Documents/GameApp/search/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3619402609468367673.xml:2:13-83
+INJECTED from /home/lidigu/Documents/GameApp/search/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3619402609468367673.xml:2:13-83
+	package
+		INJECTED from /home/lidigu/Documents/GameApp/search/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3619402609468367673.xml
+	xmlns:android
+		ADDED from /home/lidigu/Documents/GameApp/search/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3619402609468367673.xml:2:23-81
+uses-sdk
+INJECTED from /home/lidigu/Documents/GameApp/search/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3619402609468367673.xml reason: use-sdk injection requested
+INJECTED from /home/lidigu/Documents/GameApp/search/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3619402609468367673.xml
+INJECTED from /home/lidigu/Documents/GameApp/search/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3619402609468367673.xml
+	android:targetSdkVersion
+		INJECTED from /home/lidigu/Documents/GameApp/search/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3619402609468367673.xml
+	android:minSdkVersion
+		INJECTED from /home/lidigu/Documents/GameApp/search/ui/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3619402609468367673.xml

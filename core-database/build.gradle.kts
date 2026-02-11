@@ -8,7 +8,6 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
-    alias(libs.plugins.composeHotReload)
     alias(libs.plugins.sqldelight)
 }
 
@@ -117,18 +116,6 @@ sqldelight {
         create("AppDatabase") {
             packageName.set("com.lidigu.coreDatabase")
             srcDirs("src/commonMain/sqldelight")
-        }
-    }
-}
-
-
-
-compose.desktop {
-    application {
-        nativeDistributions {
-            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.lidigu.coreDatabase"
-            packageVersion = "1.0.0"
         }
     }
 }

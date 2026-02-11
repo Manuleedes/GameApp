@@ -20,6 +20,7 @@ import com.lidigu.game.domain.useCases.DownloadGameUseCase
 import com.lidigu.game.domain.useCases.ReviewGameUseCase
 import com.lidigu.game.domain.useCases.UpdateFavoriteUseCase
 import com.lidigu.game.domain.useCases.GetLocalGameUseCase
+import com.lidigu.game.domain.useCases.GetDownloadedGameUrlUseCase
 
 
 class GameDetailsViewModel(
@@ -29,7 +30,8 @@ class GameDetailsViewModel(
     private val downloadGameUseCase: DownloadGameUseCase,
     private val reviewGameUseCase: ReviewGameUseCase,
     private val getLocalGameUseCase: GetLocalGameUseCase,
-    private val updateFavoriteUseCase: UpdateFavoriteUseCase
+    private val updateFavoriteUseCase: UpdateFavoriteUseCase,
+    private val getDownloadedGameUrlUseCase: GetDownloadedGameUrlUseCase
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(GameDetailsScreen.UiState())
@@ -124,6 +126,20 @@ class GameDetailsViewModel(
         }
     }
 
+    fun play(id: Int) = viewModelScope.launch {
+        val url = getDownloadedGameUrlUseCase.invoke(id)
+        if (url != null) {
+            _uiState.update { it.copy(playUrl = url) }
+        } else {
+            // Fallback if file not found but marked as downloaded
+            _uiState.update { it.copy(error = "Downloaded file not found") }
+        }
+    }
+
+    fun consumePlayEvent() {
+        _uiState.update { it.copy(playUrl = null) }
+    }
+
 
 
 
@@ -143,6 +159,7 @@ data object GameDetailsScreen {
         val rating: Int? = null,
         val review: String? = null,
         val isDownloading: Boolean = false,
-        val downloadProgress: DownloadProgress? = null
+        val downloadProgress: DownloadProgress? = null,
+        val playUrl: String? = null
     )
 }

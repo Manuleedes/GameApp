@@ -8,4 +8,5 @@ interface DownloadRepository {
     suspend fun cancelDownload(gameId: Int)
     suspend fun getDownloadProgress(gameId: Int): Flow<DownloadProgress?>
     suspend fun getAllDownloads(): Flow<List<DownloadProgress>>
+    suspend fun getDownloadedGameUrl(gameId: Int): String?
 }

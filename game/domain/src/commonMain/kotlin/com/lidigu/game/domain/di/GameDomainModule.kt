@@ -8,6 +8,7 @@ import com.lidigu.game.domain.useCases.DownloadGameUseCase
 import com.lidigu.game.domain.useCases.ReviewGameUseCase
 import com.lidigu.game.domain.useCases.SaveGameUseCase
 import com.lidigu.game.domain.useCases.UpdateFavoriteUseCase
+import com.lidigu.game.domain.useCases.GetDownloadedGameUrlUseCase
 import org.koin.dsl.module
 
 fun getGameDomainModule() = module {
@@ -19,4 +20,5 @@ fun getGameDomainModule() = module {
     factory { ReviewGameUseCase(gameRepository = get()) }
     factory { UpdateFavoriteUseCase(gameRepository = get()) }
     factory { DeleteUseCase(gameRepository = get()) }
+    factory { GetDownloadedGameUrlUseCase(downloadRepository = get()) }
 }

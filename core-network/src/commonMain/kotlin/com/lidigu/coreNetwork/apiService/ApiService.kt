@@ -13,7 +13,6 @@ class ApiService(
 ) {
     suspend fun getGames(): Result<GameResponse>{
       return  try {
-            // FreeToGame API returns an array directly, so we wrap it
             val response = httpClient.get("/api/games").body<List<FreeToGameResult>>()
             Result.success(GameResponse(games = response))
         } catch (e: Exception) {
@@ -22,7 +21,6 @@ class ApiService(
     }
 
     suspend fun search(q: String): Result<GameResponse>{
-        // FreeToGame doesn't have a search endpoint, so we filter client-side
         return try {
             val response = httpClient.get("/api/games").body<List<FreeToGameResult>>()
             val filtered = response.filter { game ->

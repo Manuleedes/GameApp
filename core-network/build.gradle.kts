@@ -8,10 +8,7 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
-    alias(libs.plugins.composeHotReload)
-    id("org.jetbrains.kotlin.plugin.serialization") version "1.9.0"
-
-
+    alias(libs.plugins.kotlinSerialization)
 }
 
 kotlin {
@@ -116,12 +113,3 @@ dependencies {
     debugImplementation(compose.uiTooling)
 }
 
-compose.desktop {
-    application {
-        nativeDistributions {
-            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.lidigu.coreNetwork"
-            packageVersion = "1.0.0"
-        }
-    }
-}

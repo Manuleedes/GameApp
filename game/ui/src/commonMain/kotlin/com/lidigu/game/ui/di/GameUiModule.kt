@@ -16,7 +16,8 @@ fun getGameUiModule() = module {
         downloadGameUseCase = get(),
         reviewGameUseCase = get(),
         getLocalGameUseCase = get(),
-        updateFavoriteUseCase = get()
+        updateFavoriteUseCase = get(),
+        getDownloadedGameUrlUseCase = get()
     ) }
 
 }

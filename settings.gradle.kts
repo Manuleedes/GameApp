@@ -25,6 +25,8 @@ dependencyResolutionManagement {
             }
         }
         mavenCentral()
+        maven("https://www.jogamp.org/deployment/maven")
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/stable")
     }
 }
 

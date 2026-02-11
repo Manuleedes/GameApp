@@ -58,6 +58,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.compose.ui.platform.LocalUriHandler
 import coil3.compose.AsyncImage
 import org.koin.compose.viewmodel.koinViewModel
+import com.lidigu.game.ui.components.GameWebView
 
 @Composable
 fun GameDetailsScreen(modifier: Modifier = Modifier,
@@ -70,7 +71,8 @@ fun GameDetailsScreen(modifier: Modifier = Modifier,
     val uriHandler = LocalUriHandler.current
 
     var isPlaying by remember { mutableStateOf(false) }
-
+    var gameUrlToPlay by remember { mutableStateOf("") }
+    var isLoadingGame by remember { mutableStateOf(false) }
     LaunchedEffect(id) {
         viewModel.getGameDetails(id.toInt())
     }
@@ -79,6 +81,14 @@ fun GameDetailsScreen(modifier: Modifier = Modifier,
         if (uiState.value.isDeleted) {
             onDeleteSuccess()
             viewModel.consumeDeleteEvent()
+        }
+    }
+
+            LaunchedEffect(uiState.value.playUrl) {
+        uiState.value.playUrl?.let { url ->
+            gameUrlToPlay = url
+            isPlaying = true
+            viewModel.consumePlayEvent()
         }
     }
     Box(modifier = Modifier.fillMaxSize()) {
@@ -92,18 +102,48 @@ fun GameDetailsScreen(modifier: Modifier = Modifier,
                 viewModel.toggleDownload(id, image, name, gameUrl)
             },
             onSaveReview = { id, name, image, rating, review -> viewModel.saveReview(id, image, name, rating, review) },
-            onPlay = { isPlaying = true },
+            onPlay = { data -> viewModel.play(data.id) },
             isSaved = uiState.value.isSaved,
             onBackClick = onBackClick
         )
 
-        if (isPlaying) {
-            Box(modifier = Modifier.fillMaxSize().background(Color.Black).clickable { isPlaying = false }, contentAlignment = Alignment.Center) {
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text("Playing ${uiState.value.data?.name ?: "Game"} (Offline Mode)...", color = Color.White, style = MaterialTheme.typography.headlineLarge)
-                    Spacer(Modifier.height(20.dp))
-                    IconButton(onClick = { isPlaying = false }, modifier = Modifier.background(Color.White, CircleShape)) {
-                        Icon(Icons.Default.Close, contentDescription = "Close", tint = Color.Black)
+// removing the fake overlay as we now open the real URL
+        if (isPlaying && gameUrlToPlay.isNotBlank()) {
+            Box(modifier = Modifier.fillMaxSize().background(Color.Black)) {
+                Column(modifier = Modifier.fillMaxSize()) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth().background(Color.DarkGray).padding(8.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = "Playing: ${uiState.value.data?.name ?: "Game"}",
+                            color = Color.White,
+                            modifier = Modifier.weight(1f),
+                            style = MaterialTheme.typography.labelLarge
+                        )
+                        IconButton(onClick = { isPlaying = false }) {
+                            Icon(Icons.Default.Close, contentDescription = "Close", tint = Color.White)
+                        }
+                    }
+                    GameWebView(
+                        url = gameUrlToPlay,
+                        modifier = Modifier.fillMaxSize(),
+                        onLoadingStateChanged = { loading ->
+                            isLoadingGame = loading
+                        }
+                    )
+                }
+                
+                if (isLoadingGame) {
+                    Box(
+                        modifier = Modifier.fillMaxSize(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                            CircularProgressIndicator(color = Color.White)
+                            Spacer(Modifier.height(16.dp))
+                            Text("Loading Game...", color = Color.White)
+                        }
                     }
                 }
             }
@@ -120,7 +160,7 @@ fun GameDetailsScreenContent(
     onSave: (id: Int, title: String, image: String) -> Unit,
     onDownload: (id: Int, title: String, image: String) -> Unit,
     onSaveReview: (id: Int, title: String, image: String, rating: Int, review: String) -> Unit,
-    onPlay: () -> Unit,
+    onPlay: (com.lidigu.game.domain.model.GameDetails) -> Unit,
     onBackClick: () -> Unit,
     isSaved: Boolean
 ) {
@@ -456,7 +496,7 @@ fun GameDetailsScreenContent(
                     Spacer(modifier = Modifier.width(12.dp))
 
                     IconButton(
-                        onClick = onPlay,
+                        onClick = { onPlay(data) },
                         modifier = Modifier.background(color = Color(0xFF4CAF50), shape = CircleShape)
                     ) {
                         Icon(
